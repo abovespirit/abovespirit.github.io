@@ -8,4 +8,3 @@ Hand-painted Texturing
 Weapon Modelling
 Environment Art
 Tileable Materials
-punching faces
