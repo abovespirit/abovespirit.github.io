@@ -66,8 +66,6 @@ h2 {
     padding-top: 10px;
     border-bottom: 1px solid #2e2e2e;
     background-image: url(../img/Website-Content/rifle.png);
-    background-repeat: no-repeat;
-    z-index: -1;
 }
 
 hr {
