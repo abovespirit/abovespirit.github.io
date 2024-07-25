@@ -63,6 +63,7 @@ h2 {
     justify-content: flex-end;
     align-items: center;
     background-color: #1a4d64;
+    background-image: url(../img/Website-Content/rifle.png);
     padding-top: 10px;
     border-bottom: 1px solid #2e2e2e;
 }
