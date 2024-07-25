@@ -1,9 +1,9 @@
-Project Name
+Big Mega Gun
 ---
-Project Description
+Placeholder Text
 ---
 Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
 ---
-thumbnail url (gets injected into your landing page) 
+https://imgur.com/a/FwRwLPn
 ---
 bigmegagun.html
