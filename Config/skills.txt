@@ -1,10 +1,16 @@
 3D Modelling
+Hard surface Modelling 
+High & Low Poly Modelling 
 Sculpting
-Texturing
-High Poly Modelling
+PBR Texturing
+Texture Baking 
 UV-Unwrapping
+Mesh Optimization
 Retopology
 Hand-painted Texturing
 Weapon Modelling
 Environment Art
 Tileable Materials
+Rendering 
+Agile Development 
+
