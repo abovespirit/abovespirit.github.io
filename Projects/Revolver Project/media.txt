@@ -1,0 +1,27 @@
+https://imgur.com/Cb3yQXM
+Descriptions go under each image like this! png/jpeg/jpg/gif supported.
+
+https://imgur.com/9M8c1Ty
+Description for example2.jpg.
+
+https://imgur.com/l826jJn
+These aren't real images but need replacing with your own.
+
+https://imgur.com/Jd6nfaz
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://beforepic.png // https://afterpic.png
+You can create before and after slider by seperating two urls with ' // ' 
+
+https://imgur.com/JsEn6Cd
+you can also embed sketchfab files by pasting the url, no need for direct embedd urls. 
+
+https://imgur.com/HaeQHuR
+https://imgur.com/3gJoByK
+
+https://imgur.com/ea3Vb3r
+https://imgur.com/DQIpcul
+
+https://imgur.com/WvJp01p
+
+https://imgur.com/S7W2g2J.mp4
