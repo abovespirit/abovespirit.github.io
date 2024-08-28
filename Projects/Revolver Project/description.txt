@@ -6,4 +6,4 @@ Placeholder Text
 ---
 https://i.imgur.com/dl07xzj.png
 ---
-revolver.html
+"revolver.html"
