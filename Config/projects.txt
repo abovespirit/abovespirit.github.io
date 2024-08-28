@@ -1,2 +1,2 @@
 Example Project
-Example Project 2
+Test Project
