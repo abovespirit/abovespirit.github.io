@@ -4,6 +4,6 @@ Project Description
 ---
 Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
 ---
-https://i.imgur.com/dl07xzj.png
+https://imgur.com/Cb3yQXM.png
 ---
 test.html
