@@ -60,8 +60,8 @@ const thumbnailContainer = document.getElementById("thumbnail-container");
 
 // Function to fetch and parse the description.txt file
 function fetchProjectData(projectName) {
-    const descriptionPath = `../Development/${projectName}/description.txt`;
-    const mediaPath = `../Development/${projectName}/media.txt`;
+    const descriptionPath = `../Projects/${projectName}/description.txt`;
+    const mediaPath = `../Projects/${projectName}/media.txt`;
 
     return Promise.all([
         fetch(descriptionPath).then(response => response.text()),
