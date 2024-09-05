@@ -86,20 +86,20 @@ function fetchProjectData(projectName) {
     .catch(error => console.error('Error loading project data:', error));
 }
 
-// Function to fetch the projects.txt file
-function fetchProjects() {
+// Function to fetch the Development.txt file
+function fetchDevelopment() {
     return fetch('../Config/development.txt')
         .then(response => response.text())
         .then(text => text.split('\n').map(line => line.trim()).filter(line => line))
-        .catch(error => console.error('Error loading projects:', error));
+        .catch(error => console.error('Error loading Development:', error));
 }
 
-// Fetch projects and create thumbnails
-fetchProjects().then(development => {
+// Fetch Development and create thumbnails
+fetchDevelopment().then(Development => {
     let bannerImageSet = false;
     const fragment = document.createDocumentFragment(); // Create a document fragment
 
-    const fetchProjectDataPromises = projects.map(projectName => {
+    const fetchProjectDataPromises = Development.map(projectName => {
         return fetchProjectData(projectName).then(artwork => {
             const thumbnail = createThumbnail(artwork.src, artwork.alt, artwork.galleryPageUrl, artwork.hasMultipleImages, artwork.hasVideo, artwork.hasYouTube, artwork.hasSketchfab);
             fragment.appendChild(thumbnail); // Append each thumbnail to the fragment
