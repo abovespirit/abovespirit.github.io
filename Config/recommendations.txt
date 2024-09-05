@@ -2,19 +2,31 @@ Michael Fiorello
 https://media.licdn.com/dms/image/v2/C4E03AQG5GbQHFk1Jzw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1590859489182?e=1730332800&v=beta&t=AcvaW2Dvo9XxQ5isnIax6bAPUA7OS4AH65nwSkgDUao.png
 Lead Artist @ Asquare Games and Simulation
 Month/Day/Year
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+Colby has a keen eye with great attention to detail. While he is only a recent graduate, I would argue 
+that his weapon work is on-par many professionals in the field already. During our time together 
+over the course of ASGS’s internship program, Colby proved to be a talented, diligent and hard
+working artist.  
+From the very start of the internship program Colby has proved that he is willing to learn and apply 
+new techniques, improve his work based on feedback, and has continued to grow throughout his 
+time in the program, over which I taught him various tricks to help him improve asset optimization 
+which he has taken in stride.
 ---
-Name
+Nicholas Hunter
 https://profilepic.png
-Role @ Company
+Instructor @ University of Central Florida
 Month/Day/Year
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+Mr. Christopher has shown exemplary passion for 3D 
+art and the success of his team projects, as well as a dedication to learning new software and techniques to 
+improve his skills. The industry of game development requires much more than a college degree. Successful students 
+will make this their profession if they have the initiative to go beyond assignment requirements and engage in 
+autodidactism. I express this to my students, but few put it into action. Mr. Christopher is one of the few who 
+strive for more in their work, and he has shown to be a well-liked team member.
 ---
-Name
+Kacey Walsh
 https://profilepic.png
-Role @ Company
-Month/Day/Year
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+General Artist @ Asquare Games and Simulation
+07/20/2024
+Colby is a hardworking and enthusiastic team member. I've worked with Colby on the same team for roughly 1/2 a year, where there was not a challenge too big, or a software too complex for him. He is outgoing and personable with the entire team but is also able to complete every task thrown at him with speed and accuracy, even those requiring research or a new program. Colby is an absolute delight to work with and would be a great addition to any team.
 ---
 Name
 https://profilepic.png
