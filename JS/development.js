@@ -60,8 +60,8 @@ const thumbnailContainer = document.getElementById("thumbnail-container");
 
 // Function to fetch and parse the description.txt file
 function fetchProjectData(projectName) {
-    const descriptionPath = `../Projects/${projectName}/description.txt`;
-    const mediaPath = `../Projects/${projectName}/media.txt`;
+    const descriptionPath = `../Development/${projectName}/description.txt`;
+    const mediaPath = `../Development/${projectName}/media.txt`;
 
     return Promise.all([
         fetch(descriptionPath).then(response => response.text()),
@@ -88,18 +88,18 @@ function fetchProjectData(projectName) {
 
 // Function to fetch the projects.txt file
 function fetchProjects() {
-    return fetch('../Config/projects.txt')
+    return fetch('../Config/development.txt')
         .then(response => response.text())
         .then(text => text.split('\n').map(line => line.trim()).filter(line => line))
-        .catch(error => console.error('Error loading projects:', error));
+        .catch(error => console.error('Error loading development:', error));
 }
 
 // Fetch projects and create thumbnails
-fetchProjects().then(projects => {
+fetchProjects().then(development => {
     let bannerImageSet = false;
     const fragment = document.createDocumentFragment(); // Create a document fragment
 
-    const fetchProjectDataPromises = projects.map(projectName => {
+    const fetchProjectDataPromises = development.map(projectName => {
         return fetchProjectData(projectName).then(artwork => {
             const thumbnail = createThumbnail(artwork.src, artwork.alt, artwork.galleryPageUrl, artwork.hasMultipleImages, artwork.hasVideo, artwork.hasYouTube, artwork.hasSketchfab);
             fragment.appendChild(thumbnail); // Append each thumbnail to the fragment
