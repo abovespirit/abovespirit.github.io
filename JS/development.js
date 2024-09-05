@@ -88,14 +88,14 @@ function fetchProjectData(projectName) {
 
 // Function to fetch the projects.txt file
 function fetchProjects() {
-    return fetch('../Config/projects.txt')
+    return fetch('../Config/development.txt')
         .then(response => response.text())
         .then(text => text.split('\n').map(line => line.trim()).filter(line => line))
         .catch(error => console.error('Error loading projects:', error));
 }
 
 // Fetch projects and create thumbnails
-fetchProjects().then(projects => {
+fetchProjects().then(development => {
     let bannerImageSet = false;
     const fragment = document.createDocumentFragment(); // Create a document fragment
 
