@@ -39,7 +39,7 @@ h1 {
     font-size: 20px;
     margin: 0;
     margin-bottom: 5px;
-    color: white;
+    color: rgb(255, 0, 0);
     -webkit-user-select: none; /* Safari */
     user-select: none;
     font-weight: 400;
@@ -92,7 +92,7 @@ hr {
 .panel-title {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #ff0000;
+    color: #d7d7d7;
     text-align: left; /* Align panel titles to the left */
 }
 
