@@ -156,8 +156,9 @@ h2 {
   }
 
   #canvas1 {
+    z-index: 1;
     width: 100vw;
-    height: 650px;
+    height: 450px;
     /* transform: translateX(200px); */
   }
 
