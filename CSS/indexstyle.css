@@ -154,4 +154,11 @@ h2 {
       border-radius: 5px; /* Maintain border radius for consistent look */
       margin-top: 0; /* Add margin at the top for spacing */
   }
+
+  #canvas1 {
+    width: 100vw;
+    height: 650px;
+    /* transform: translateX(200px); */
+  }
+
 }
