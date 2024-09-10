@@ -13,9 +13,16 @@
     <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png"/>
 </head>
 <body>
+    <!-- particles.js container -->
+    <div id="particles-js"></div>
+
+    <!-- stats - count particles -->
+    <div class="count-particles">
+      <span class="js-count-particles">--</span> particles
+    </div>
+
     <div class="main-container">
         <div class="top-container">
-            
             <div class="user-info-panel">
                 <!-- User Information Here -->
             </div>
@@ -29,15 +36,31 @@
             <div class="thumbnail-container" id="thumbnail-container"></div>
         </div>
     </div>
+    
     <div class="resize-buttons">
         <button id="plus-button" class="resize-button">+</button>
         <button id="minus-button" class="resize-button">-</button>
     </div>
+
     <!-- Link to the external JavaScript files -->
     <script src="../JS/userinformation.js?v=1.0"></script>
     <script src="../JS/index.js?v=1.0"></script>
     <script src="../JS/resize-thumbnails.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- particles.js settings -->
     <script>
+        particlesJS.load('particles-js', 'path-to-particlesjs-config.json', function() {
+            console.log('particles.js loaded');
+        });
+
+        // JavaScript to count particles
+        const countParticles = function() {
+            const particles = window.pJSDom[0].pJS.particles.array.length;
+            document.querySelector('.js-count-particles').innerText = particles;
+        };
+        setInterval(countParticles, 100);
+
         // JavaScript to add 'active' class to the current page's navigation button
         document.addEventListener("DOMContentLoaded", function() {
             const currentPath = window.location.pathname.split('/').pop();
@@ -49,6 +72,5 @@
             });
         });
     </script>
-
 </body>
 </html>
