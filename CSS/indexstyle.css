@@ -165,6 +165,7 @@ body {
 
 canvas {
   display: block;
+  z-index: 1;
   /* vertical-align: bottom; */
 }
 
@@ -218,5 +219,6 @@ canvas {
 .count-particles{
   border-radius: 0 0 3px 3px;
 }
+
 
 }
