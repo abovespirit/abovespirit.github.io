@@ -31,9 +31,10 @@ body {
   color: #d7d7d7;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Heading Styles */
 h1 {
   font-size: 20px;
   margin-bottom: 5px;
@@ -44,6 +45,7 @@ h1 {
 
 h2 {
   font-size: 16px;
+  margin: 0;
   color: grey;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
@@ -51,49 +53,47 @@ h2 {
   user-select: none;
 }
 
-/* Main Container Styling */
 .main-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  flex: 1;
-  overflow-y: auto; /* Ensure the main container scrolls if necessary */
+  height: 100%;
+  position: relative;
 }
 
-/* Top Container Styling */
 .top-container {
-  position: relative; /* For absolutely positioned children */
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between; /* Add space between content and buttons */
   align-items: center;
   padding-top: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 1px solid #2e2e2e;
-  min-height: 300px; /* Adjust the height as necessary */
   width: 100%;
+  position: relative;
 }
 
-/* Particles.js Styling */
+/* Particles background */
 #particles-js {
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: calc(100% - 50px); /* Adjust the height to fit below the buttons */
-  z-index: -1; /* Keep particles behind other content */
-  background-size: cover;
-  background-position: center;
+  z-index: -1; /* Ensure it remains behind the content */
 }
 
-/* Navigation Buttons */
 .navigation-buttons {
   display: flex;
-  gap: 0.5rem;
   justify-content: center;
-  padding-bottom: 10px; /* Adjust padding for spacing */
+  position: absolute;
+  bottom: 10px; /* Add buttons at the bottom */
+  width: 100%;
+  z-index: 1; /* Keep them above the particles */
+  gap: 0.5rem;
 }
 
 .nav-button {
@@ -106,17 +106,15 @@ h2 {
   padding: 10px;
   margin-right: 10px;
   font-size: 14px;
-  border-radius: 0.9em 0.9em 0 0;
+  border-radius: .9em .9em 0 0;
   transition: ease 0.5s;
 }
 
-.nav-button.active,
-.nav-button:hover {
+.nav-button.active, .nav-button:hover {
   background-color: #171717;
   color: #16e0bd;
 }
 
-/* Bottom Container */
 .bottom-container {
   flex: 1;
   display: flex;
@@ -125,75 +123,46 @@ h2 {
   background-color: #151515;
   border-radius: 5px;
   width: 100%;
-  margin-top: 0;
+  margin-top: 0; /* No margin at the top */
 }
 
-/* Particles Counter (Optional) */
-.count-particles {
-  background: #000022;
-  position: absolute;
-  top: 48px;
-  left: 0;
-  width: 80px;
-  color: #13e8e9;
-  font-size: 0.8em;
-  text-align: left;
-  text-indent: 4px;
-  line-height: 14px;
-  padding-bottom: 2px;
-  font-family: Helvetica, Arial, sans-serif;
-  font-weight: bold;
-}
-
-.js-count-particles {
-  font-size: 1.1em;
-}
-
-#stats,
-.count-particles {
-  -webkit-user-select: none;
-}
-
-/* Media Queries for Mobile Responsiveness */
 @media (max-width: 600px) {
   body {
-    font-size: 14px;
+    font-size: 14px; /* Adjust the base font size for better readability on small screens */
   }
 
   h1 {
-    font-size: 18px;
-    text-align: center;
+    font-size: 18px; /* Adjust font size for mobile */
+    text-align: center; /* Center align text for better readability on mobile */
   }
 
   h2 {
-    font-size: 14px;
-    text-align: center;
+    font-size: 14px; /* Adjust font size for mobile */
+    text-align: center; /* Center align text for better readability on mobile */
   }
 
   .main-container {
-    overflow-y: auto;
-    padding-top: 5px;
+    padding-top: 5px; /* Add padding for better spacing on mobile */
   }
 
   .top-container {
-    padding-top: 5px;
+    padding-top: 5px; /* Adjust padding for mobile */
     border-bottom: 1px solid #2e2e2e;
   }
 
   .navigation-buttons {
-    gap: 0.5rem;
+    gap: 0.5rem; /* Adjust gap for better spacing on mobile */
   }
 
   .nav-button {
-    font-size: 12px;
-    padding: 8px;
-    margin-right: 0;
-    border-radius: 0.5em 0.5em 0 0;
+    font-size: 12px; /* Adjust font size for navigation buttons on mobile */
+    padding: 8px; /* Reduce padding for better fit on mobile */
+    margin-right: 0; /* Remove margin for better fit on mobile */
   }
 
   .bottom-container {
-    background-color: #171717;
-    padding: 8px;
-    margin-top: 0;
+    padding: 8px; /* Adjust padding for mobile */
+    border-radius: 5px; /* Maintain border radius for consistent look */
+    margin-top: 0; /* Adjust margin for better fit on mobile */
   }
 }
