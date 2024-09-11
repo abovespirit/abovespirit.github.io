@@ -31,12 +31,11 @@ body {
   color: #d7d7d7;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 h1 {
   font-size: 20px;
+  margin: 0;
   margin-bottom: 5px;
   color: #d7d7d7;
   -webkit-user-select: none; /* Safari */
@@ -57,43 +56,42 @@ h2 {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
-  position: relative;
+  flex: 1;
+  overflow-y: auto; /* Ensure main container scrolls if necessary */
 }
 
 .top-container {
-  flex: 1;
+  flex: 0 0 auto; /* Adjust the height as needed */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* Add space between content and buttons */
+  flex-direction: column-reverse;
+  justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 1px solid #2e2e2e;
-  width: 100%;
   position: relative;
+  height: 100vh; /* Make sure it takes up the full screen */
 }
 
-/* Particles background */
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  z-index: -1; /* Ensure it remains behind the content */
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
+/* Navigation Buttons */
 .navigation-buttons {
   display: flex;
+  gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 10px; /* Add buttons at the bottom */
+  bottom: 20px; /* Ensure the buttons are at the bottom */
   width: 100%;
-  z-index: 1; /* Keep them above the particles */
-  gap: 0.5rem;
 }
 
 .nav-button {
@@ -104,13 +102,20 @@ h2 {
   text-decoration: none;
   cursor: pointer;
   padding: 10px;
-  margin-right: 10px;
   font-size: 14px;
-  border-radius: .9em .9em 0 0;
+  border-radius: 0.9em 0.9em 0 0;
   transition: ease 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-button.active, .nav-button:hover {
+.nav-button i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+.nav-button.active,
+.nav-button:hover {
   background-color: #171717;
   color: #16e0bd;
 }
@@ -142,27 +147,29 @@ h2 {
   }
 
   .main-container {
+    overflow-y: auto; /* Ensure main container scrolls if necessary */
     padding-top: 5px; /* Add padding for better spacing on mobile */
   }
 
   .top-container {
     padding-top: 5px; /* Adjust padding for mobile */
     border-bottom: 1px solid #2e2e2e;
+    height: 100vh; /* Ensure it fills the full height on mobile */
   }
 
   .navigation-buttons {
+    flex-direction: row; /* Keep buttons aligned horizontally on mobile */
     gap: 0.5rem; /* Adjust gap for better spacing on mobile */
   }
 
   .nav-button {
     font-size: 12px; /* Adjust font size for navigation buttons on mobile */
     padding: 8px; /* Reduce padding for better fit on mobile */
-    margin-right: 0; /* Remove margin for better fit on mobile */
   }
 
   .bottom-container {
+    background-color: #171717;
     padding: 8px; /* Adjust padding for mobile */
     border-radius: 5px; /* Maintain border radius for consistent look */
-    margin-top: 0; /* Adjust margin for better fit on mobile */
   }
 }
