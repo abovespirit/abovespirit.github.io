@@ -14,41 +14,36 @@
 </head>
 <body>
     <div class="main-container">
-     
-         <!-- partial:index.partial.html -->
-<!-- particles.js container -->
-<div id="particles-js"></div>
-
-<!-- stats - count particles -->
-<div class="count-particles">
-  <span class="js-count-particles">--</span> particles
-</div>
-
-<!-- particles.js lib (JavaScript CodePen settings): https://github.com/VincentGarreau/particles.js -->
-<!-- partial -->
-  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-<script src='https://threejs.org/examples/js/libs/stats.min.js'></script><script  src="../JS/script.js"></script>
-
         <div class="top-container">
-            
+            <!-- Particles.js container -->
+            <div id="particles-js"></div>
+
+            <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <!-- User Information Here -->
             </div>
+
+            <!-- Navigation Buttons -->
             <div class="navigation-buttons">
                 <a href="index.html" class="nav-button" id="nav-portfolio">Portfolio</a>
                 <a href="development.html" class="nav-button" id="nav-articles">Projects</a>
                 <a href="about.html" class="nav-button" id="nav-about">About</a>
             </div>
         </div>
+
         <div class="bottom-container">
             <div class="thumbnail-container" id="thumbnail-container"></div>
         </div>
     </div>
+
     <div class="resize-buttons">
         <button id="plus-button" class="resize-button">+</button>
         <button id="minus-button" class="resize-button">-</button>
     </div>
+
     <!-- Link to the external JavaScript files -->
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
     <script src="../JS/userinformation.js?v=1.0"></script>
     <script src="../JS/index.js?v=1.0"></script>
     <script src="../JS/resize-thumbnails.js"></script>
@@ -62,6 +57,38 @@
                     button.classList.add('active');
                 }
             });
+        });
+    </script>
+
+    <script>
+        // particles.js configuration
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 100, density: { enable: true, value_area: 800 } },
+            color: { value: '#ffffff' },
+            shape: {
+              type: 'circle',
+              stroke: { width: 0, color: '#000000' },
+              polygon: { nb_sides: 5 },
+              image: { src: '', width: 100, height: 100 }
+            },
+            opacity: { value: 0.5, anim: { enable: false } },
+            size: { value: 3, anim: { enable: false } },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: '#ffffff',
+              opacity: 0.4,
+              width: 1
+            },
+            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false } }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+            modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+          },
+          retina_detect: true
         });
     </script>
 
