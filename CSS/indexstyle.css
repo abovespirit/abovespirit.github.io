@@ -90,8 +90,9 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 20px; /* Ensure the buttons are at the bottom */
+  bottom: 0; /* Set to 0 to remove the gap */
   width: 100%;
+  padding-bottom: 0; /* Ensure no padding at the bottom */
 }
 
 .nav-button {
