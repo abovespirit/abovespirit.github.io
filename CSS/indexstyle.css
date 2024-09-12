@@ -109,10 +109,13 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: 1.5em; /* Adjust line-height for better centering */
+  height: 50px; /* Set a consistent height for the buttons */
 }
 
 .nav-button i {
   margin-right: 8px; /* Space between icon and text */
+  vertical-align: middle; /* Ensure icons align vertically */
 }
 
 .nav-button.active,
@@ -166,6 +169,7 @@ h2 {
   .nav-button {
     font-size: 12px; /* Adjust font size for navigation buttons on mobile */
     padding: 8px; /* Reduce padding for better fit on mobile */
+    height: 45px; /* Adjust height for mobile */
   }
 
   .bottom-container {
