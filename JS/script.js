@@ -22,7 +22,7 @@ particlesJS("particles-js", {
           "nb_sides": 5
         },
         "image": {
-          "src": "img/github.svg",
+          "src": "../img/Website-Content/rifle.png",
           "width": 100,
           "height": 100
         }
@@ -50,7 +50,7 @@ particlesJS("particles-js", {
       "line_linked": {
         "enable": true,
         "distance": 150,
-        "color": "rgba(22,224,189)", 
+        "color": "#ffffff", 
         "opacity": 0.4,
         "width": 1
       },
