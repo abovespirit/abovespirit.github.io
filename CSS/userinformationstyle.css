@@ -49,7 +49,7 @@
 }
 
 .social-icons a {
-  color: #e06c16 !important;
+  color: grey !important; 
   font-size: 24px;
   transition: color 0.3s;
 }
