@@ -68,7 +68,7 @@ h2 {
   align-items: center;
   padding-top: 10px;
   background-size: cover;
-  z-index: -1;
+  z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
   border-bottom: 1px solid #2e2e2e;
