@@ -23,5 +23,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vita
 Role
 Company
 Date (i.e 2020-present or 2016-2023)
-https://productionimage.jpg 
+https://productionimage.jpg d
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
