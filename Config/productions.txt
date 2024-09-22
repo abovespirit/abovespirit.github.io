@@ -2,26 +2,26 @@
 # When you add one then productions.js will automatically add it after saving
 # Format: Title, Company, Time, Thumbnail URL, Description 
 ---
-3d Artist Intern 
-Asquare Games and Simulation 
-Date (Jan 2024 - Aug 2024)
-https://productionimage.jpg 
+3D Artist Intern 
+A Square Games & Simulation 
+Date (i.e 2020-present or 2016-2023)
+https://imgur.com/6INuMOJ.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
-3d Artist
+3D Generalist 
 Lizard Lair Games
-Date (Aug 2023 - May 2024)
-https://productionimage.jpg 
+Date (i.e 2020-present or 2016-2023)
+https://imgur.com/GPW4Xid.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
-Hardsurface Artist 
-Aviary Productions
-Date (Nov 2022 - July 2023 )
-https://productionimage.jpg 
+Medical Animation Intern 
+Arthrex
+Date (i.e 2020-present or 2016-2023)
+https://imgur.com/9ZHO8H4.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
-Medical Animation Intern
-Arthrex 
-Date (May 2017 - August 2017)
+Role
+Company
+Date (i.e 2020-present or 2016-2023)
 https://productionimage.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
