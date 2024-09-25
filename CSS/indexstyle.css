@@ -28,10 +28,6 @@ html, body {
 body {
   font-family: Montserrat, sans-serif;
   background-color: #121212;
-  background-image: url('img/Website-Content/background.png'); /* Corrected to PNG */
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
   color: #d7d7d7;
   display: flex;
   flex-direction: column;
@@ -71,13 +67,13 @@ h2 {
   justify-content: flex-end;
   align-items: center;
   padding-top: 10px;
+  background-image: url('../img/Website-Content/background.png'); /* Ensure correct path to your background image */
   background-size: cover;
-  z-index: 1;
   background-position: center;
   background-repeat: no-repeat;
-  border-bottom: 1px solid #2e2e2e;
+  z-index: 1;
   position: relative;
-  height: 50vh; /* Make sure it takes up the full screen */
+  height: 50vh;
 }
 
 #particles-js {
@@ -86,7 +82,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
 /* Navigation Buttons */
@@ -95,9 +91,9 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 0; /* Set to 0 to remove the gap */
+  bottom: 0;
   width: 100%;
-  padding-bottom: 0; /* Ensure no padding at the bottom */
+  padding-bottom: 0;
 }
 
 .nav-button {
@@ -114,13 +110,8 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  line-height: 1.5em; /* Adjust line-height for better centering */
-  height: 50px; /* Set a consistent height for the buttons */
-}
-
-.nav-button i {
-  margin-right: 8px; /* Space between icon and text */
-  vertical-align: middle; /* Ensure icons align vertically */
+  line-height: 1.5em;
+  height: 50px;
 }
 
 .nav-button.active,
@@ -129,6 +120,7 @@ h2 {
   color: #16e0bd;
 }
 
+/* Bottom Container */
 .bottom-container {
   flex: 1;
   display: flex;
@@ -137,49 +129,5 @@ h2 {
   background-color: #151515;
   border-radius: 5px;
   width: 100%;
-  margin-top: 0; /* No margin at the top */
-}
-
-@media (max-width: 600px) {
-  body {
-    font-size: 14px; /* Adjust the base font size for better readability on small screens */
-  }
-
-  h1 {
-    font-size: 18px; /* Adjust font size for mobile */
-    text-align: center; /* Center align text for better readability on mobile */
-  }
-
-  h2 {
-    font-size: 14px; /* Adjust font size for mobile */
-    text-align: center; /* Center align text for better readability on mobile */
-  }
-
-  .main-container {
-    overflow-y: auto; /* Ensure main container scrolls if necessary */
-    padding-top: 5px; /* Add padding for better spacing on mobile */
-  }
-
-  .top-container {
-    padding-top: 5px; /* Adjust padding for mobile */
-    border-bottom: 1px solid #2e2e2e;
-    height: 100vh; /* Ensure it fills the full height on mobile */
-  }
-
-  .navigation-buttons {
-    flex-direction: row; /* Keep buttons aligned horizontally on mobile */
-    gap: 0.5rem; /* Adjust gap for better spacing on mobile */
-  }
-
-  .nav-button {
-    font-size: 12px; /* Adjust font size for navigation buttons on mobile */
-    padding: 8px; /* Reduce padding for better fit on mobile */
-    height: 45px; /* Adjust height for mobile */
-  }
-
-  .bottom-container {
-    background-color: #171717;
-    padding: 8px; /* Adjust padding for mobile */
-    border-radius: 5px; /* Maintain border radius for consistent look */
-  }
+  margin-top: 0;
 }
