@@ -24,7 +24,7 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal overflow */
   box-sizing: border-box;
   background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
-  background-size: contain; /* Change from cover to contain */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -66,10 +66,10 @@ h2 {
 .top-container {
   flex: 0 0 auto; /* Adjust the height as needed */
   display: flex;
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-  align-items: center;
-  padding-top: 10px;
+  flex-direction: column;
+  justify-content: center; /* Align items vertically centered */
+  align-items: center; /* Align items horizontally centered */
+  padding-top: 0; /* Remove padding to prevent white space */
   position: relative;
   height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
@@ -84,10 +84,12 @@ h2 {
   z-index: 0; /* Make sure particles are behind the content */
 }
 
-/* Profile Picture */
 .profile-picture {
-  position: relative; /* Ensure it can be placed above particles */
-  z-index: 2; /* Make sure profile picture is above particles */
+  width: 150px; /* Set a width for the profile picture */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Make it circular */
+  z-index: 1; /* Ensure the profile picture is above particles */
+  position: relative; /* Position relative to top-container */
 }
 
 /* Navigation Buttons */
