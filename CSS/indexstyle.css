@@ -23,7 +23,7 @@ html, body {
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal overflow */
   box-sizing: border-box;
-  background-image: url('../img/Website-Content/background.png'); /* Background image */
+  background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
