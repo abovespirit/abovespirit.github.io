@@ -108,6 +108,13 @@
             z-index: 2; /* Ensure the profile picture is above particles */
         }
 
+        /* Profile Text Styling */
+        .profile-text {
+            margin-top: 10px; /* Adjust spacing as necessary */
+            text-align: center; /* Center align text */
+            z-index: 2; /* Ensure text is above particles */
+        }
+
         /* User Info Panel */
         .user-info-panel {
             z-index: 2; /* Ensure the user info panel is above particles */
@@ -172,6 +179,10 @@
             <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
+                <div class="profile-text">
+                    <h1>Colby Christopher</h1> <!-- Change this to the desired name -->
+                    <h2>Your Title or Description</h2> <!-- Optional subtitle or description -->
+                </div>
             </div>
 
             <!-- Navigation Buttons -->
@@ -236,8 +247,18 @@
           },
           interactivity: {
             detect_on: 'canvas',
-            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            events: {
+              onhover: { enable: true, mode: 'grab' },
+              onclick: { enable: true, mode: 'push' },
+              resize: true
+            },
+            modes: {
+              grab: { distance: 140, line_linked: { opacity: 1 } },
+              bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+              repulse: { distance: 200, duration: 0.4 },
+              push: { particles_nb: 4 },
+              remove: { particles_nb: 2 }
+            }
           },
           retina_detect: true
         });
