@@ -108,6 +108,12 @@
             z-index: 2; /* Ensure the profile picture is above particles */
         }
 
+        /* User Info Panel */
+        .user-info-panel {
+            z-index: 2; /* Ensure the user info panel is above particles */
+            text-align: center; /* Center the text */
+        }
+
         /* Navigation Buttons */
         .navigation-buttons {
             display: flex;
@@ -117,6 +123,7 @@
             bottom: 0;
             width: 100%;
             padding-bottom: 0;
+            z-index: 2; /* Ensure navigation buttons are above particles */
         }
 
         .nav-button {
@@ -232,7 +239,7 @@
           interactivity: {
             detect_on: 'canvas',
             events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 100, size: 40, duration: 2, opacity: 8, speed: 2 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
           },
           retina_detect: true
         });
