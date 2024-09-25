@@ -91,17 +91,17 @@ h2 {
   width: 150px; /* Set a width for the profile picture */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
-  position: relative; /* Changed to relative positioning */
-  top: -40px; /* Adjusted for better vertical positioning */
+  position: relative; /* Keep relative positioning */
+  top: -40px; /* Adjust for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
 /* Profile Text Styling */
 .profile-text {
   position: absolute; /* Position it absolutely to overlap the picture */
+  top: 10px; /* Adjust to position behind the picture */
   z-index: 0; /* Ensure text is behind the profile picture */
-  margin-top: 20px; /* Adjust spacing as necessary to bring it behind */
-  visibility: hidden; /* Hide the text completely */
+  opacity: 0; /* Hide the text completely */
 }
 
 /* Navigation Buttons */
