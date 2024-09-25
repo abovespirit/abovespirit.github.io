@@ -28,7 +28,7 @@ html, body {
 body {
   font-family: Montserrat, sans-serif;
   background-color: #121212;
-  background-image: url('img/Website-Content/background.jpg'); /* Add background image */
+  background-image: url('img/Website-Content/background.png'); /* Corrected to PNG */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
