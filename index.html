@@ -11,6 +11,150 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css?v=1.0" />
     <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png"/>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge */
+        html {
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+
+        /* Body Styling */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+            box-sizing: border-box;
+            background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #d7d7d7;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 5px;
+            color: #d7d7d7;
+            -webkit-user-select: none; /* Safari */
+            user-select: none;
+        }
+
+        h2 {
+            font-size: 16px;
+            margin: 0;
+            color: grey;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            -webkit-user-select: none; /* Safari */
+            user-select: none;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex: 1;
+            overflow-y: auto; /* Ensure main container scrolls if necessary */
+        }
+
+        .top-container {
+            flex: 0 0 auto; /* Adjust the height as needed */
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 10px;
+            position: relative;
+            height: 50vh; /* Keep the height */
+            z-index: 1; /* Ensure content is on top */
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Make sure particles are behind the content */
+        }
+
+        /* Profile Picture Styling */
+        .profile-picture {
+            width: 150px; /* Set a width for the profile picture */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make it circular */
+            position: relative; /* Changed to relative positioning */
+            top: -50px; /* Adjust as necessary for vertical positioning */
+            z-index: 2; /* Ensure the profile picture is above particles */
+        }
+
+        /* Navigation Buttons */
+        .navigation-buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        .nav-button {
+            background-color: inherit;
+            border: none;
+            color: grey;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 0.9em 0.9em 0 0;
+            transition: ease 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.5em;
+            height: 50px;
+        }
+
+        .nav-button.active,
+        .nav-button:hover {
+            background-color: #171717;
+            color: #16e0bd;
+        }
+
+        /* Bottom Container */
+        .bottom-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #151515;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="main-container">
@@ -18,12 +162,11 @@
             <!-- Particles.js container -->
             <div id="particles-js"></div>
 
-            <!-- Profile Picture (Replace 'profile.jpg' with your actual image path) -->
-            <img src="../img/Website-Content/profile.jpg" alt="Profile Picture" class="profile-picture" />
-
             <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
-                <!-- User Information Here -->
+                <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
+                <h1>Your Name</h1> <!-- Replace with actual name -->
+                <h2>Your Title</h2> <!-- Replace with actual title -->
             </div>
 
             <!-- Navigation Buttons -->
@@ -89,10 +232,4 @@
           interactivity: {
             detect_on: 'canvas',
             events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 100, size: 40, duration: 2, opacity: 8, speed: 2 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-          },
-          retina_detect: true
-        });
-    </script>
-</body>
-</html>
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 100, size: 40, duration: 2, opacity: 8, speed: 2 }, repulse: { distance: 50, duration: 0.4 },
