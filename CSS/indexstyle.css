@@ -24,7 +24,7 @@ html, body {
   overflow-x: hidden; /* Prevent horizontal overflow */
   box-sizing: border-box;
   background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
-  background-size: cover;
+  background-size: contain; /* Change from cover to contain */
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -82,6 +82,12 @@ h2 {
   width: 100%;
   height: 100%;
   z-index: 0; /* Make sure particles are behind the content */
+}
+
+/* Profile Picture */
+.profile-picture {
+  position: relative; /* Ensure it can be placed above particles */
+  z-index: 2; /* Make sure profile picture is above particles */
 }
 
 /* Navigation Buttons */
