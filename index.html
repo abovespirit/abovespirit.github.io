@@ -50,7 +50,14 @@
             flex-direction: column;
         }
 
-        /* Top Container Styles */
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex: 1;
+            overflow-y: auto; /* Ensure main container scrolls if necessary */
+        }
+
         .top-container {
             flex: 0 0 auto; /* Adjust the height as needed */
             display: flex;
@@ -80,7 +87,18 @@
             position: relative; /* Changed to relative positioning */
             top: -50px; /* Adjust as necessary for vertical positioning */
             z-index: 2; /* Ensure the profile picture is above particles */
-            display: block; /* Ensure it's treated as a block element */
+        }
+
+        /* User Info Panel */
+        .user-info-panel {
+            z-index: 2; /* Ensure the user info panel is above particles */
+            text-align: center; /* Center the text */
+            position: relative; /* Ensure it maintains its positioning */
+        }
+
+        /* Hide the profile picture text */
+        .user-info-panel span {
+            display: none; /* Hide any text within this panel */
         }
 
         /* Navigation Buttons */
@@ -138,9 +156,10 @@
             <!-- Particles.js container -->
             <div id="particles-js"></div>
 
-            <!-- User Info Panel (Profile picture only) -->
+            <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
+                <span>Profile Picture</span> <!-- This line will now be hidden -->
             </div>
 
             <!-- Navigation Buttons -->
@@ -206,7 +225,7 @@
           interactivity: {
             detect_on: 'canvas',
             events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
           },
           retina_detect: true
         });
