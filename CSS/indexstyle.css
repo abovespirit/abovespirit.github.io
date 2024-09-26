@@ -79,14 +79,9 @@ body {
 .user-info-panel {
   z-index: 2;
   text-align: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-/* Hide the span text 'Profile Picture' */
-.user-info-panel span {
-  display: none;
+  position: absolute; /* Updated to absolute */
+  top: 0; /* Moved to the top */
+  width: 100%; /* Full width of container */
 }
 
 /* Navigation Buttons */
