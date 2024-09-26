@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge */
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 /* Body Styling */
@@ -96,12 +96,17 @@ h2 {
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
+/* User Info Panel */
+.user-info-panel {
+  text-align: center; /* Center the text */
+  z-index: 2; /* Ensure the user info panel is above particles */
+}
+
 /* Profile Text Styling */
 .profile-text {
-  position: absolute; /* Position it absolutely to overlap the picture */
-  z-index: 0; /* Ensure text is behind the profile picture */
-  margin-top: 20px; /* Adjust spacing as necessary to bring it behind */
-  display: none; /* Use display: none to remove it from the layout */
+  z-index: 1; /* Ensure text is below the profile picture but still visible */
+  color: #d7d7d7; /* Ensure text is visible */
+  margin-top: 10px; /* Space between picture and text */
 }
 
 /* Navigation Buttons */
