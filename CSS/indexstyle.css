@@ -92,7 +92,7 @@ h2 {
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
   position: relative; /* Changed to relative positioning */
-  top: -30px; /* Adjusted for better vertical positioning */
+  top: -10px; /* Adjust for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -100,14 +100,14 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  position: relative; /* Ensure it's positioned relatively */
+  top: 30px; /* Move the entire panel down */
 }
 
 /* Profile Text Styling */
 .profile-text {
-  z-index: 1; /* Ensure text is below the profile picture */
   color: #d7d7d7; /* Ensure text is visible */
-  margin-top: -40px; /* Pull the text upwards to hide it behind the profile picture */
-  visibility: hidden; /* Hide text to ensure it does not affect layout */
+  margin-top: 10px; /* Space between picture and text */
 }
 
 /* Navigation Buttons */
