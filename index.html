@@ -21,9 +21,7 @@
             <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
-                <span>Profile Picture</span> <!-- Hidden text -->
-                <h1 class="title">Colby Christopher</h1> <!-- Title text -->
-                <p class="location">Orlando, FL</p> <!-- Location text -->
+                <span>Profile Picture</span>
             </div>
 
             <!-- Navigation Buttons -->
@@ -51,6 +49,7 @@
     <script src="../JS/index.js?v=1.0"></script>
     <script src="../JS/resize-thumbnails.js"></script>
     <script>
+        // JavaScript to add 'active' class to the current page's navigation button
         document.addEventListener("DOMContentLoaded", function() {
             const currentPath = window.location.pathname.split('/').pop();
             const navButtons = document.querySelectorAll('.nav-button');
@@ -63,6 +62,7 @@
     </script>
 
     <script>
+        // particles.js configuration
         particlesJS('particles-js', {
           particles: {
             number: { value: 115, density: { enable: true, value_area: 800 } },
