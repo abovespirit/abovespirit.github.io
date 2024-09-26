@@ -12,7 +12,7 @@ html::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge */
 html {
-  -ms-overflow-style: none;
+  -ms-overflow-style: none;  /* IE and Edge */
 }
 
 /* Body Styling */
@@ -22,7 +22,6 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden;
-  box-sizing: border-box;
   background-image: url('../img/Website-Content/background.png');
   background-size: cover;
   background-position: center;
@@ -71,7 +70,7 @@ body {
   height: auto;
   border-radius: 50%;
   position: relative;
-  top: -50px;
+  top: -40px; /* Adjusted to move it down slightly */
   z-index: 2;
 }
 
@@ -79,14 +78,26 @@ body {
 .user-info-panel {
   z-index: 2;
   text-align: center;
-  position: absolute;
-  top: 0;
-  width: 100%;
+  position: relative;
 }
 
-/* Hide the span text 'Profile Picture' */
 .user-info-panel span {
   display: none;
+}
+
+/* Title Styling */
+.title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: -20px; /* Adjust spacing for the title */
+}
+
+/* Location Styling */
+.location {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
 /* Navigation Buttons */
