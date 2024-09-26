@@ -1,3 +1,19 @@
+// Function to load user information
+function loadUserInfo() {
+    const profilePic = document.getElementById('profilePic');
+    const userName = document.getElementById('userName');
+    const userRole = document.getElementById('userRole');
+    const userLocation = document.getElementById('userLocation');
+
+    // Set the profile picture source
+    profilePic.src = 'path/to/your/profile.jpg'; // Update with actual path
+
+    // Remove the text
+    userName.innerText = ''; // Clear user name
+    userRole.innerText = ''; // Clear user role
+    userLocation.innerText = ''; // Clear user location
+}
+
 // Function to create a thumbnail with overlay icons
 function createThumbnail(src, alt, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab) {
     const thumbnailLink = document.createElement("a");
@@ -117,3 +133,6 @@ fetchProjects().then(projects => {
         thumbnailContainer.appendChild(fragment);
     });
 });
+
+// Call the function to load user info
+loadUserInfo();
