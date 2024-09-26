@@ -113,7 +113,6 @@
         .user-info-panel {
             z-index: 2; /* Ensure the user info panel is above particles */
             text-align: center; /* Center the text */
-            visibility: hidden; /* Hides the panel */
         }
 
         /* Navigation Buttons */
@@ -174,7 +173,7 @@
             <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
-                <span style="display: none;">Profile Picture</span> <!-- Hidden text to ensure nothing is displayed -->
+                <span style="display: none;">Profile Picture</span> <!-- Hidden text for screen readers only -->
             </div>
 
             <!-- Navigation Buttons -->
