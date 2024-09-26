@@ -29,7 +29,7 @@ function addUserInformation() {
             const img = document.createElement("img");
             img.src = profilePicUrl; // Your Profile Pic URL from txt
             img.alt = "Profile Picture";
-            img.className = "profile-picture"; // Use the existing CSS class for proper styling
+            img.className = "profile-pic";
             userInfoPanel.appendChild(img);
 
             // Create and append the user name as a link
