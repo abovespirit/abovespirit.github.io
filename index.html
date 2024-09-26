@@ -50,33 +50,7 @@
             flex-direction: column;
         }
 
-        h1 {
-            font-size: 20px;
-            margin: 0;
-            margin-bottom: 5px;
-            color: #d7d7d7;
-            -webkit-user-select: none; /* Safari */
-            user-select: none;
-        }
-
-        h2 {
-            font-size: 16px;
-            margin: 0;
-            color: grey;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 400;
-            -webkit-user-select: none; /* Safari */
-            user-select: none;
-        }
-
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            flex: 1;
-            overflow-y: auto; /* Ensure main container scrolls if necessary */
-        }
-
+        /* Top Container Styles */
         .top-container {
             flex: 0 0 auto; /* Adjust the height as needed */
             display: flex;
@@ -107,12 +81,6 @@
             top: -50px; /* Adjust as necessary for vertical positioning */
             z-index: 2; /* Ensure the profile picture is above particles */
             display: block; /* Ensure it's treated as a block element */
-        }
-
-        /* User Info Panel */
-        .user-info-panel {
-            z-index: 2; /* Ensure the user info panel is above particles */
-            text-align: center; /* Center the text */
         }
 
         /* Navigation Buttons */
@@ -170,7 +138,7 @@
             <!-- Particles.js container -->
             <div id="particles-js"></div>
 
-            <!-- User Info Panel (Content that will appear on top of particles background) -->
+            <!-- User Info Panel (Profile picture only) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
             </div>
