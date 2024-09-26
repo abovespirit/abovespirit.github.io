@@ -106,12 +106,14 @@
             position: relative; /* Changed to relative positioning */
             top: -50px; /* Adjust as necessary for vertical positioning */
             z-index: 2; /* Ensure the profile picture is above particles */
+            display: block; /* Ensure it's treated as a block element */
         }
 
         /* User Info Panel */
         .user-info-panel {
             z-index: 2; /* Ensure the user info panel is above particles */
             text-align: center; /* Center the text */
+            visibility: hidden; /* Hides the panel */
         }
 
         /* Navigation Buttons */
@@ -172,6 +174,7 @@
             <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
                 <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
+                <span style="display: none;">Profile Picture</span> <!-- Hidden text to ensure nothing is displayed -->
             </div>
 
             <!-- Navigation Buttons -->
@@ -237,7 +240,7 @@
           interactivity: {
             detect_on: 'canvas',
             events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
           },
           retina_detect: true
         });
