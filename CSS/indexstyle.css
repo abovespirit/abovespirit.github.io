@@ -101,7 +101,7 @@ h2 {
   position: absolute; /* Position it absolutely to overlap the picture */
   z-index: 0; /* Ensure text is behind the profile picture */
   margin-top: 20px; /* Adjust spacing as necessary to bring it behind */
-  visibility: hidden; /* Hide the text completely */
+  display: none; /* Use display: none to remove it from the layout */
 }
 
 /* Navigation Buttons */
