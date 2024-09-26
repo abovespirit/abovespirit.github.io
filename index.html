@@ -61,9 +61,9 @@
         .top-container {
             flex: 0 0 auto; /* Adjust the height as needed */
             display: flex;
-            flex-direction: column-reverse;
-            justify-content: flex-end;
-            align-items: center;
+            flex-direction: column;
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
             padding-top: 10px;
             position: relative;
             height: 50vh; /* Keep the height */
@@ -85,7 +85,6 @@
             height: auto; /* Maintain aspect ratio */
             border-radius: 50%; /* Make it circular */
             position: relative; /* Changed to relative positioning */
-            top: -50px; /* Adjust as necessary for vertical positioning */
             z-index: 2; /* Ensure the profile picture is above particles */
         }
 
@@ -93,7 +92,8 @@
         .user-info-panel {
             z-index: 2; /* Ensure the user info panel is above particles */
             text-align: center; /* Center the text */
-            position: relative; /* Ensure it maintains its positioning */
+            position: absolute; /* Absolute positioning to move it up */
+            top: 0; /* Move to the top of the screen */
         }
 
         /* Hide the profile picture text */
@@ -181,11 +181,9 @@
     </div>
 
     <!-- Link to the external JavaScript files -->
-    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
-    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
-    <script src="../JS/userinformation.js?v=1.0"></script>
-    <script src="../JS/index.js?v=1.0"></script>
-    <script src="../JS/resize-thumbnails.js"></script>
+    <script src='../JS/userinformation.js?v=1.0'></script>
+    <script src='../JS/development.js?v=1.0'></script>
+    <script src='../JS/resize-thumbnails.js'></script>
     <script>
         // JavaScript to add 'active' class to the current page's navigation button
         document.addEventListener("DOMContentLoaded", function() {
@@ -231,4 +229,4 @@
         });
     </script>
 </body>
-</html>
+</html
