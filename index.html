@@ -248,8 +248,7 @@
 
         document.getElementById('particles-js').addEventListener('click', function() {
             if (canCreateBurst) {
-                particlesJS.fn.interactivity.modes.push.particles_nb = 10; // Burst amount (10 particles)
-                particlesJS.fn.interactivity.pushParticles();
+                particlesJS.fn.particles.pushParticles(10); // Burst amount (10 particles)
                 canCreateBurst = false;
 
                 // Re-enable after 10 seconds
