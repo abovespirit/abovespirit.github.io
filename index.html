@@ -224,38 +224,10 @@
           },
           interactivity: {
             detect_on: 'canvas',
-            events: {
-              onhover: { enable: true, mode: 'repulse' },
-              onclick: {
-                enable: true,
-                mode: 'push'
-              },
-              resize: true
-            },
-            modes: {
-              grab: { distance: 100, line_linked: { opacity: 1 } },
-              bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 },
-              repulse: { distance: 50, duration: 0.4 },
-              push: { particles_nb: 4 },
-              remove: { particles_nb: 2 }
-            }
+            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
           },
           retina_detect: true
-        });
-
-        // Burst limiter (one burst every 10 seconds)
-        let canCreateBurst = true;
-
-        document.getElementById('particles-js').addEventListener('click', function() {
-            if (canCreateBurst) {
-                particlesJS.fn.particles.pushParticles(10); // Burst amount (10 particles)
-                canCreateBurst = false;
-
-                // Re-enable after 10 seconds
-                setTimeout(function() {
-                    canCreateBurst = true;
-                }, 10000);
-            }
         });
     </script>
 </body>
