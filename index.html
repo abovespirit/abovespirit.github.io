@@ -234,8 +234,8 @@
             },
             modes: {
               grab: { distance: 100, line_linked: { opacity: 1 } },
-              bubble: { distance: 50, size: 10, duration: 1, opacity: 0.8 },
-              repulse: { distance: 100, duration: 0.4 },
+              bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 },
+              repulse: { distance: 50, duration: 0.4 },
               push: { particles_nb: 4 },
               remove: { particles_nb: 2 }
             }
@@ -243,7 +243,7 @@
           retina_detect: true
         });
 
-        // Throttle function to control burst creation every 10 seconds
+        // Burst limiter (one burst every 10 seconds)
         let canCreateBurst = true;
 
         document.getElementById('particles-js').addEventListener('click', function() {
@@ -254,7 +254,7 @@
                 // Re-enable after 10 seconds
                 setTimeout(function() {
                     canCreateBurst = true;
-                }, 10000); // 10-second burst limiter
+                }, 10000);
             }
         });
     </script>
