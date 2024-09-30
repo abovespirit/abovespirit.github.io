@@ -197,8 +197,12 @@
                 }
             });
         });
+    </script>
 
-        // particles.js configuration with limit and fade-out for excess particles
+    <script>
+        // particles.js configuration with limit, fade-out for excess particles, and a cooldown for particle bursts
+        let canCreateParticles = true;
+
         particlesJS('particles-js', {
           particles: {
             number: { value: 80, density: { enable: true, value_area: 800 } }, // Reduced for performance
@@ -222,39 +226,24 @@
           },
           interactivity: {
             detect_on: 'canvas',
-            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            events: { 
+              onhover: { enable: true, mode: 'repulse' },
+              onclick: {
+                enable: true,
+                mode: 'push',
+                function: () => {
+                  if (canCreateParticles) {
+                    canCreateParticles = false;
+                    setTimeout(() => { canCreateParticles = true; }, 5000); // 5-second cooldown
+                  }
+                }
+              },
+              resize: true 
+            },
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 20 }, remove: { particles_nb: 10 } }
           },
           retina_detect: true
         });
-
-        // Particle removal with fade-out effect
-        function limitParticles(maxParticles) {
-            const canvas = document.querySelector('#particles-js canvas');
-            const context = canvas.getContext('2d');
-            let particlesArray = [];
-            let fadingParticles = [];
-
-            // Function to fade out extra particles
-            function fadeOutParticles() {
-                particlesArray = particlesArray.slice(0, maxParticles); // Limit particle count
-                for (const particle of fadingParticles) {
-                    context.globalAlpha = particle.alpha;
-                    context.fillStyle = particle.color;
-                    context.beginPath();
-                    context.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
-                    context.closePath();
-                    context.fill();
-                    particle.alpha -= 0.01; // Gradually decrease alpha
-                    if (particle.alpha <= 0) fadingParticles.splice(fadingParticles.indexOf(particle), 1); // Remove faded particles
-                }
-                requestAnimationFrame(fadeOutParticles);
-            }
-
-            requestAnimationFrame(fadeOutParticles); // Start fade-out loop
-        }
-
-        limitParticles(100); // Set particle limit (tweak based on performance)
     </script>
 </body>
 </html>
