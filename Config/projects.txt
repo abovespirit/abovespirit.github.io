@@ -2,3 +2,5 @@ Knife
 Revolver
 Arthrex
 Glock
+Tank
+AK-47
