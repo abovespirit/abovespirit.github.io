@@ -3,4 +3,4 @@ Revolver
 Arthrex
 Glock
 Tank
-AK-47
+Ak-47
