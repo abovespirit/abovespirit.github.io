@@ -45,17 +45,17 @@
   transition: opacity 0.5s;
   margin-bottom: 10px;
   margin-top: 5px;
-  color: #16e0bd !important; 
+  color: grey !important; 
 }
 
 .social-icons a {
-  color: grey !important; 
+  color: #16e0bd  !important; 
   font-size: 24px;
   transition: color 0.3s;
 }
 
 .social-icons a:hover {
-  color: #16e0bd !important;;
+  color: grey !important;;
 }
 
 .user-location-container {
