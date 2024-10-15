@@ -55,24 +55,19 @@ h2 {
     user-select: none;
 }
 
-/* Updated Top Container */
+/* Merged Top Container CSS */
 .top-container {
-    flex: 0 0 auto; 
+    flex: 0 0 auto;
     display: flex;
-    flex-direction: column-reverse; /* Ensures content is pushed to the bottom */
+    flex-direction: column-reverse;
     justify-content: flex-end;
     align-items: center;
     background-color: #1a4d64;
     padding-top: 10px;
-    padding-bottom: 20px; /* Added padding to ensure tabs sit comfortably */
     border-bottom: 1px solid #2e2e2e;
     position: relative;
-    height: 50vh; /* Ensure consistent height */
+    height: 50vh; /* Adjust height as needed */
     z-index: 1;
-    background-image: url(../img/Website-Content/rifle.png); /* Ensure background image is properly set */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 #particles-js {
@@ -82,6 +77,20 @@ h2 {
     width: 100%;
     height: 100%;
     z-index: 0; /* Ensure particles are behind content */
+}
+
+.top-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/Website-Content/rifle.png); /* Adjust path as needed */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; /* Ensure background is behind everything */
 }
 
 hr {
@@ -122,14 +131,11 @@ p {
     text-align: justify;
 }
 
-/* Navigation buttons (tabs) */
+/* Navigation buttons */
 .navigation-buttons {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    padding-bottom: 0; /* Ensure tabs are at the bottom */
-    align-self: flex-end; /* Ensures buttons align at the bottom of the top container */
-    margin-top: auto; /* Pushes buttons to the bottom */
 }
 
 .nav-button {
