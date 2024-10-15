@@ -21,9 +21,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png"/>
+    <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png" />
   </head>
   <body>
+    <div id="particles-js"></div> <!-- Particles.js background -->
     <div class="top-container">
       <!-- Placeholder div where user information will dynamically be added -->
       <div class="user-info-panel">
@@ -79,7 +80,13 @@
     <script src="../JS/userinformation.js"></script>
     <script src="../JS/recommendations.js"></script>
     <script src="../JS/productions.js"></script>
+    <script src="../JS/particles.js"></script> <!-- Include particles.js script -->
     <script>
+      // Initialize particles.js
+      particlesJS.load("particles-js", "../path/to/particles.json", function () {
+        console.log("callback - particles.js config loaded");
+      });
+
       // JavaScript to add 'active' class to the current page's navigation button
       document.addEventListener("DOMContentLoaded", function () {
         const currentPath = window.location.pathname.split("/").pop();
