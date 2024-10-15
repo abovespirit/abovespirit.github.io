@@ -92,7 +92,7 @@ h2 {
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
   position: relative; /* Changed to relative positioning */
-  
+  top: -211px; /* Adjusted for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
