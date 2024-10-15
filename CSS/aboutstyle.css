@@ -31,10 +31,6 @@ html {
     -ms-overflow-style: none;  /* IE and Edge */
 }
 
-body {
-    overflow-y: scroll; /* Allows vertical scrolling */
-}
-
 h1 {
     font-size: 20px;
     margin: 0;
@@ -42,7 +38,6 @@ h1 {
     color: #16e0bd;
     -webkit-user-select: none; /* Safari */
     user-select: none;
-    /* font-weight: 400; */
     text-align: left; /* Ensure all h1 elements are aligned to the left */
 }
 
