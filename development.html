@@ -11,30 +11,180 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css?v=1.0" />
     <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png"/>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hide scrollbar for Chrome, Safari, and Opera */
+        html::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Hide scrollbar for IE, Edge */
+        html {
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+
+        /* Body Styling */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal overflow */
+            box-sizing: border-box;
+            background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        body {
+            font-family: Montserrat, sans-serif;
+            color: #d7d7d7;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            flex: 1;
+            overflow-y: auto; /* Ensure main container scrolls if necessary */
+        }
+
+        .top-container {
+            flex: 0 0 auto; /* Adjust the height as needed */
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+            align-items: center;
+            padding-top: 10px;
+            position: relative;
+            height: 50vh; /* Keep the height */
+            z-index: 1; /* Ensure content is on top */
+        }
+
+        #particles-js {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Make sure particles are behind the content */
+        }
+
+        /* Profile Picture Styling */
+        .profile-picture {
+            width: 150px; /* Set a width for the profile picture */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 50%; /* Make it circular */
+            position: relative; /* Changed to relative positioning */
+            top: -210px; /* Adjust as necessary for vertical positioning */
+            z-index: 2; /* Ensure the profile picture is above particles */
+        }
+
+        /* User Info Panel */
+        .user-info-panel {
+            z-index: 2; /* Ensure the user info panel is above particles */
+            text-align: center; /* Center the text */
+            position: relative; /* Ensure it maintains its positioning */
+        }
+
+        /* Hide the profile picture text */
+        .user-info-panel span {
+            display: none; /* Hide any text within this panel */
+        }
+
+        /* Navigation Buttons */
+        .navigation-buttons {
+            display: flex;
+            gap: 0.5rem;
+            justify-content: center;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-bottom: 0;
+            z-index: 2; /* Ensure navigation buttons are above particles */
+        }
+
+        .nav-button {
+            background-color: inherit;
+            border: none;
+            color: grey;
+            font-family: 'Poppins', sans-serif;
+            text-decoration: none;
+            cursor: pointer;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 0.9em 0.9em 0 0;
+            transition: ease 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.5em;
+            height: 50px;
+        }
+
+        .nav-button.active,
+        .nav-button:hover {
+            background-color: #171717;
+            color: #16e0bd;
+        }
+
+        /* Bottom Container */
+        .bottom-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #151515;
+            border-radius: 5px;
+            width: 100%;
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="main-container">
         <div class="top-container">
+            <!-- Particles.js container -->
+            <div id="particles-js"></div>
+
+            <!-- User Info Panel (Content that will appear on top of particles background) -->
             <div class="user-info-panel">
-                <!-- User Information Here -->
+                <img src="../img/your-profile-picture.png" alt="Profile Picture" class="profile-picture" /> <!-- Replace with your actual image -->
+                <span>Profile Picture</span> <!-- This line will now be hidden -->
             </div>
+
+            <!-- Navigation Buttons -->
             <div class="navigation-buttons">
                 <a href="index.html" class="nav-button" id="nav-portfolio">Portfolio</a>
                 <a href="development.html" class="nav-button" id="nav-articles">Projects</a>
                 <a href="about.html" class="nav-button" id="nav-about">About</a>
             </div>
         </div>
+
         <div class="bottom-container">
             <div class="thumbnail-container" id="thumbnail-container"></div>
         </div>
     </div>
+
     <div class="resize-buttons">
         <button id="plus-button" class="resize-button">+</button>
         <button id="minus-button" class="resize-button">-</button>
     </div>
+
     <!-- Link to the external JavaScript files -->
+    <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+    <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
     <script src="../JS/userinformation.js?v=1.0"></script>
-    <script src="../JS/development.js?v=1.0"></script>
+    <script src="../JS/index.js?v=1.0"></script>
     <script src="../JS/resize-thumbnails.js"></script>
     <script>
         // JavaScript to add 'active' class to the current page's navigation button
@@ -46,6 +196,38 @@
                     button.classList.add('active');
                 }
             });
+        });
+    </script>
+
+    <script>
+        // particles.js configuration with thicker lines and limited particle count
+        particlesJS('particles-js', {
+          particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } }, // Reduced for performance
+            color: { value: '#FFFFFF' },
+            shape: {
+              type: 'circle',
+              stroke: { width: 0, color: '#000000' },
+              polygon: { nb_sides: 5 },
+              image: { src: '', width: 100, height: 100 }
+            },
+            opacity: { value: 0.5, anim: { enable: false } },
+            size: { value: 2, anim: { enable: false } },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: '#16e0bd',
+              opacity: 0.8, // Slightly more visible
+              width: 2 // Thicker lines for better visibility
+            },
+            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false } }
+          },
+          interactivity: {
+            detect_on: 'canvas',
+            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
+            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+          },
+          retina_detect: true
         });
     </script>
 </body>
