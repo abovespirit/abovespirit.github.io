@@ -75,7 +75,7 @@ h2 {
     height: 50vh; /* Keep the height */
     z-index: 1; /* Ensure content is on top */
     background-color: #1a4d64;
-    background-image: url(../img/Website-Content/rifle.png); /* Add rifle image background */
+    background-image: url(../img/Website-Content/background.png); /* Add rifle image background */
     border-bottom: 1px solid #2e2e2e;
 }
 
