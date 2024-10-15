@@ -22,6 +22,21 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="icon" href="../../Resources/favicon/pilfav.png" type="image/png" />
+    <style>
+      /* Add basic styles for the particles canvas */
+      #particles-js {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0; /* Make sure particles are behind other content */
+      }
+
+      body {
+        position: relative; /* Ensure body can position children absolutely */
+      }
+    </style>
   </head>
   <body>
     <div id="particles-js"></div> <!-- Particles.js background -->
@@ -75,11 +90,7 @@
         <!-- Production cards will be added here -->
       </div>
     </div>
-    <script src="../JS/summary.js"></script>
-    <script src="../JS/skills.js"></script>
-    <script src="../JS/userinformation.js"></script>
-    <script src="../JS/recommendations.js"></script>
-    <script src="../JS/productions.js"></script>
+    
     <script src="../JS/particles.js"></script> <!-- Include particles.js script -->
     <script>
       // Initialize particles.js
