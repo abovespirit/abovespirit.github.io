@@ -31,7 +31,7 @@ html, body {
 
 body {
   font-family: Montserrat, sans-serif;
-  color: #d7d7d7;
+  color: #d7d7d700;
   display: flex;
   flex-direction: column;
 }
