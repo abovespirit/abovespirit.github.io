@@ -42,7 +42,6 @@ h1 {
     color: #16e0bd;
     -webkit-user-select: none; /* Safari */
     user-select: none;
-    /* font-weight: 400; */
     text-align: left; /* Ensure all h1 elements are aligned to the left */
 }
 
@@ -130,6 +129,17 @@ p {
 .nav-button.active, .nav-button:hover {
     background-color: #171717;
     color: #16e0bd;
+}
+
+.productions-panel {
+    width: 100%; /* Full width */
+    padding: 20px; /* Padding for content */
+}
+
+.productions-subpanels {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content */
 }
 
 @media (max-width: 600px) {
