@@ -42,6 +42,7 @@ h1 {
     color: #16e0bd;
     -webkit-user-select: none; /* Safari */
     user-select: none;
+    /* font-weight: 400; */
     text-align: left; /* Ensure all h1 elements are aligned to the left */
 }
 
