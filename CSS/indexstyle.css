@@ -184,7 +184,7 @@ h2 {
   .top-container {
     height: 60vh; /* Increase height for mobile */
     padding-top: 10px; /* Add padding to the top for better alignment */
-    padding-bottom: 100px; /* Add padding to the top for better alignment */
+    padding-bottom: 150px; /* Add padding to the top for better alignment */
   }
 
   #particles-js {
