@@ -66,14 +66,12 @@ h2 {
 }
 
 .top-container {
-  flex: 0 0 auto; /* Adjust the height as needed */
   display: flex;
-  flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
-  padding-top: 10px;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
   position: relative;
   height: 50vh; /* Keep the original height */
+  max-height: 50vh; /* Prevent scaling over thumbnail */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
 }
@@ -183,7 +181,7 @@ h2 {
 @media (max-width: 768px) {
   .top-container {
     height: 60vh; /* Increase height for mobile */
-    padding-top: 10px; /* Add padding to the top for better alignment */
+    max-height: 60vh; /* Prevent scaling over thumbnail */
   }
 
   #particles-js {
