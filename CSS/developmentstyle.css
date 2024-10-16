@@ -75,6 +75,7 @@ h2 {
   position: relative;
   height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
+  border-bottom: 1px solid #2e2e2e;
 }
 
 #particles-js {
