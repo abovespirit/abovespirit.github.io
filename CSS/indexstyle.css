@@ -31,7 +31,7 @@ html, body {
 
 body {
   font-family: Montserrat, sans-serif;
-  color: #d7d7d700;
+  color: #d7d7d7;
   display: flex;
   flex-direction: column;
 }
@@ -66,15 +66,15 @@ h2 {
 }
 
 .top-container {
-  flex: 0 0 auto; /* Adjust the height as needed */
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center content vertically */
-  align-items: center; /* Center content horizontally */
+  justify-content: center;
+  align-items: center;
   padding-top: 10px;
   position: relative;
-  height: 50vh; /* Keep the height */
-  z-index: 1; /* Ensure content is on top */
+  height: 50vh; /* Default for desktop */
+  z-index: 1;
   border-bottom: 1px solid #2e2e2e;
 }
 
@@ -84,30 +84,32 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 0; /* Make sure particles are behind the content */
+  z-index: 0;
 }
 
 /* Profile Picture Styling */
 .profile-picture {
-  width: 150px; /* Set a width for the profile picture */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 50%; /* Make it circular */
-  position: relative; /* Changed to relative positioning */
-  top: -211px; /* Adjusted for better vertical positioning */
-  z-index: 2; /* Ensure the profile picture is above particles and text */
+  width: 150px;
+  height: auto;
+  border-radius: 50%;
+  position: relative;
+  top: 0;
+  z-index: 2;
 }
 
 /* User Info Panel */
 .user-info-panel {
-  text-align: center; /* Center the text */
-  z-index: 2; /* Ensure the user info panel is above particles */
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  top: 0;
 }
 
 /* Profile Text Styling */
 .profile-text {
-  z-index: 1; /* Ensure text is below the profile picture but still visible */
-  color: #d7d7d7; /* Ensure text is visible */
-  margin-top: 10px; /* Space between picture and text */
+  z-index: 1;
+  color: #d7d7d7;
+  margin-top: 10px;
 }
 
 /* Navigation Buttons */
@@ -179,4 +181,24 @@ h2 {
 
 .resize-button:hover {
   background-color: #16e0bd;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .top-container {
+    height: calc(50vh * 0.75); /* Reduce height by half for mobile */
+  }
+
+  .profile-picture {
+    width: 120px;
+    top: -10px; /* Adjust top position */
+  }
+
+  .user-info-panel {
+    top: 10px; /* Lower the user info slightly */
+  }
+
+  .navigation-buttons {
+    bottom: 5px; /* Slightly reduced padding for mobile */
+  }
 }
