@@ -31,7 +31,7 @@ html, body {
 
 body {
   font-family: Montserrat, sans-serif;
-  color: #d7d7d700;
+  color: #d7d7d7;
   display: flex;
   flex-direction: column;
 }
@@ -93,7 +93,7 @@ h2 {
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
   position: relative; /* Changed to relative positioning */
-  top: -211px; /* Adjusted for better vertical positioning */
+  top: -160px; /* Adjusted to center the profile picture vertically */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -101,6 +101,8 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  position: relative; /* Keep the position relative */
+  top: -120px; /* Adjust user info panel position */
 }
 
 /* Profile Text Styling */
@@ -179,4 +181,24 @@ h2 {
 
 .resize-button:hover {
   background-color: #16e0bd;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .top-container {
+    height: 40vh; /* Decrease height for mobile */
+  }
+
+  .profile-picture {
+    width: 120px; /* Reduce the profile picture size for mobile */
+    top: -130px; /* Adjust positioning */
+  }
+
+  .user-info-panel {
+    top: -110px; /* Adjust user info panel position */
+  }
+
+  .navigation-buttons {
+    bottom: 5px; /* Adjust position on mobile */
+  }
 }
