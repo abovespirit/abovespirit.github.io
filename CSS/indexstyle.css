@@ -73,7 +73,7 @@ h2 {
   align-items: center; /* Center content horizontally */
   padding-top: 10px;
   position: relative;
-  height: 60vh; /* Increased height for mobile */
+  height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
 }
@@ -100,7 +100,7 @@ h2 {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
   position: relative; /* Change to relative positioning */
-  margin-top: -40px; /* Adjust to position above navigation */
+  margin-top: -60px; /* Adjust to position above navigation */
 }
 
 /* Profile Text Styling */
@@ -184,7 +184,7 @@ h2 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .top-container {
-    height: 60vh; /* Increased height for mobile */
+    height: auto; /* Allow for dynamic height on mobile */
     padding-top: 10px; /* Add padding to the top for better alignment */
   }
 
