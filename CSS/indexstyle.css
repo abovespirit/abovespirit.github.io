@@ -69,11 +69,11 @@ h2 {
   flex: 0 0 auto;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Adjust for top alignment */
+  justify-content: center;
   align-items: center;
+  padding-top: 10px;
   position: relative;
-  height: auto; /* Allow for dynamic height */
-  padding-top: 0; /* Remove padding to align top */
+  height: 50vh; /* Default for desktop */
   z-index: 1;
   border-bottom: 1px solid #2e2e2e;
 }
@@ -94,7 +94,6 @@ h2 {
   border-radius: 50%;
   position: relative;
   top: 0;
-  margin-top: 0; /* Remove any margin */
   z-index: 2;
 }
 
@@ -103,7 +102,7 @@ h2 {
   text-align: center;
   z-index: 2;
   position: relative;
-  margin-top: 5px; /* Space above the thumbnail section */
+  top: 0;
 }
 
 /* Profile Text Styling */
@@ -187,16 +186,16 @@ h2 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .top-container {
-    height: auto; /* Allow for dynamic height on mobile */
+    height: calc(50vh * 0.75); /* Reduce height by half for mobile */
   }
 
   .profile-picture {
     width: 120px;
-    margin-top: 0; /* Align the profile picture at the very top */
+    top: -10px; /* Adjust top position */
   }
 
   .user-info-panel {
-    margin-top: 5px; /* Adjust margin above thumbnail section */
+    top: 10px; /* Lower the user info slightly */
   }
 
   .navigation-buttons {
