@@ -116,7 +116,7 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 10px; /* Adjusted bottom position for more space */
+  bottom: 10px; /* Set to 10px to align with the top of the bottom container */
   width: 100%;
   padding-bottom: 0;
 }
@@ -197,6 +197,6 @@ h2 {
   }
 
   .navigation-buttons {
-    bottom: 10px; /* Adjust bottom spacing to provide more space */
+    bottom: 0; /* Align with bottom container */
   }
 }
