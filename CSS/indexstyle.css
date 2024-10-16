@@ -116,7 +116,7 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 0; /* Set to 0 to align with bottom container */
+  bottom: 10px; /* Set to 10px to align with the top of the bottom container */
   width: 100%;
   padding-bottom: 0;
 }
