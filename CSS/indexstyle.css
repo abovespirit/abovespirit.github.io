@@ -188,7 +188,7 @@ h2 {
   }
 
   #particles-js {
-    height: 120%; /* Increase particles canvas height */
+    height: 100%; /* Increase particles canvas height */
   }
 
   .profile-picture {
