@@ -92,8 +92,6 @@ h2 {
   width: 150px; /* Set a width for the profile picture */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
-  position: relative; /* Changed to relative positioning */
-  top: -211px; /* Adjusted for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -101,6 +99,8 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  position: relative; /* Change to relative positioning */
+  margin-top: -60px; /* Adjust to position above navigation */
 }
 
 /* Profile Text Styling */
@@ -179,4 +179,24 @@ h2 {
 
 .resize-button:hover {
   background-color: #16e0bd;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+  .top-container {
+    height: auto; /* Allow for dynamic height on mobile */
+    padding-top: 10px; /* Add padding to the top for better alignment */
+  }
+
+  .profile-picture {
+    width: 120px;
+  }
+
+  .user-info-panel {
+    margin-top: -30px; /* Adjust margin to ensure it's centered above navigation */
+  }
+
+  .navigation-buttons {
+    bottom: 10px; /* Adjust bottom spacing */
+  }
 }
