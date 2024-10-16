@@ -76,6 +76,7 @@ h2 {
   height: 50vh; /* Keep the original height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
+  transform: translateY(-25%); /* Shift the entire container up by 25% of its height */
 }
 
 #particles-js {
@@ -99,6 +100,7 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  margin-bottom: 50px; /* Ensure spacing above navigation */
 }
 
 /* Profile Text Styling */
@@ -114,7 +116,7 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 15px; /* Adjusted bottom position for more space */
+  bottom: 10px; /* Adjusted bottom position for more space */
   width: 100%;
   padding-bottom: 0;
 }
@@ -183,7 +185,7 @@ h2 {
 @media (max-width: 768px) {
   .top-container {
     height: 60vh; /* Increase height for mobile */
-    padding-top: 10px; /* Add padding to the top for better alignment */
+    transform: translateY(-25%); /* Adjusted to keep user info panel centered */
   }
 
   #particles-js {
@@ -192,10 +194,6 @@ h2 {
 
   .profile-picture {
     width: 120px; /* Adjust profile picture size */
-  }
-
-  .user-info-panel {
-    margin-bottom: 50px; /* Ensure spacing above navigation */
   }
 
   .navigation-buttons {
