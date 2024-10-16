@@ -103,7 +103,7 @@ h2 {
   text-align: center;
   z-index: 2;
   position: relative;
-  margin-top: 5px; /* Space above the thumbnail section */
+  margin-top: 15px; /* Increased space above the thumbnail section */
 }
 
 /* Profile Text Styling */
@@ -196,7 +196,7 @@ h2 {
   }
 
   .user-info-panel {
-    margin-top: 5px; /* Adjust margin above thumbnail section */
+    margin-top: 15px; /* Increased margin above thumbnail section */
   }
 
   .navigation-buttons {
