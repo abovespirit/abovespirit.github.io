@@ -73,7 +73,7 @@ h2 {
   align-items: center; /* Center content horizontally */
   padding-top: 10px;
   position: relative;
-  height: 50vh; /* Keep the original height */
+  height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
 }
@@ -83,7 +83,7 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Default height */
+  height: 100%;
   z-index: 0; /* Make sure particles are behind the content */
 }
 
@@ -92,6 +92,8 @@ h2 {
   width: 150px; /* Set a width for the profile picture */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
+  position: relative; /* Changed to relative positioning */
+  top: -211px; /* Adjusted for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -99,6 +101,9 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  position: relative; /* Ensure it's positioned relative to the top container */
+  max-height: calc(100vh - 70px); /* Ensure it does not exceed the viewport height */
+  overflow: hidden; /* Prevent content overflow */
 }
 
 /* Profile Text Styling */
@@ -114,11 +119,13 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 0px; /* Adjusted bottom position for more space */
+  bottom: 0; /* Stay at the bottom of the canvas */
   width: 100%;
   padding-bottom: 0;
+  z-index: 3; /* Ensure buttons are above the user info */
 }
 
+/* Navigation Button Styling */
 .nav-button {
   background-color: inherit;
   border: none;
@@ -153,6 +160,7 @@ h2 {
   border-radius: 5px;
   width: 100%;
   margin-top: 0;
+  z-index: 1; /* Make sure it's below navigation */
 }
 
 /* Resize Buttons */
@@ -177,28 +185,4 @@ h2 {
 
 .resize-button:hover {
   background-color: #16e0bd;
-}
-
-/* Media Queries for Mobile Devices */
-@media (max-width: 768px) {
-  .top-container {
-    height: 60vh; /* Increase height for mobile */
-    padding-top: 10px; /* Add padding to the top for better alignment */
-  }
-
-  #particles-js {
-    height: 120%; /* Increase particles canvas height */
-  }
-
-  .profile-picture {
-    width: 120px; /* Adjust profile picture size */
-  }
-
-  .user-info-panel {
-    margin-bottom: 50px; /* Ensure spacing above navigation */
-  }
-
-  .navigation-buttons {
-    bottom: 0px; /* Adjust bottom spacing to provide more space */
-  }
 }
