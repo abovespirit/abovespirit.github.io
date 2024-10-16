@@ -199,6 +199,6 @@ h2 {
   }
 
   .navigation-buttons {
-    bottom: 10px; /* Adjust bottom spacing to provide more space */
+    bottom: 0px; /* Adjust bottom spacing to provide more space */
   }
 }
