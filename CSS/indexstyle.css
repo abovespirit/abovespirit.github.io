@@ -186,7 +186,7 @@ h2 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .top-container {
-    height: calc(50vh * 2.5); /* Extend height for mobile */
+    height: 40vh; /* Decrease height for mobile */
   }
 
   .profile-picture {
