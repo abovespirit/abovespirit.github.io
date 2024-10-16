@@ -186,19 +186,19 @@ h2 {
 /* Media Queries for Mobile Devices */
 @media (max-width: 768px) {
   .top-container {
-    height: calc(50vh * 2.5); /* Extend height for mobile */
+    height: calc(50vh * 1.5); /* Reduced height for mobile */
   }
 
   .profile-picture {
     width: 120px;
-    top: 0; /* Center the profile picture */
+    top: -20px; /* Adjusted top positioning */
   }
 
   .user-info-panel {
-    top: 10px; /* Center the user info */
+    top: 0px; /* Adjust for centering */
   }
 
   .navigation-buttons {
-    bottom: 5px; /* Adjust position on mobile */
+    bottom: 10px; /* Slightly adjusted for mobile */
   }
 }
