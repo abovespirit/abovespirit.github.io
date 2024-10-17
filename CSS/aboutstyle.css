@@ -94,7 +94,7 @@ h2 {
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make it circular */
     position: absolute; /* Absolute positioning for consistency */
-    top: 50%; /* Adjusted from 10% to 50% to move lower */
+    top: 75%; /* Adjusted from 10% to 50% to move lower */
     transform: translateY(-50%); /* Center vertically */
     z-index: 2; /* Ensure the profile picture is above particles and text */
 }
