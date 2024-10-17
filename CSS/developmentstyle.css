@@ -73,7 +73,7 @@ h2 {
   align-items: center; /* Center content horizontally */
   padding-top: 10px;
   position: relative;
-  height: 50vh; /* Keep the height */
+  height: 50vh; /* Keep the original height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
 }
@@ -83,7 +83,7 @@ h2 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Default height */
   z-index: 0; /* Make sure particles are behind the content */
 }
 
@@ -92,8 +92,6 @@ h2 {
   width: 150px; /* Set a width for the profile picture */
   height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
-  position: relative; /* Changed to relative positioning */
-  top: -211px; /* Adjusted for better vertical positioning */
   z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -116,7 +114,7 @@ h2 {
   gap: 0.5rem;
   justify-content: center;
   position: absolute;
-  bottom: 0;
+  bottom: 0px; /* Adjusted bottom position for more space */
   width: 100%;
   padding-bottom: 0;
 }
@@ -179,4 +177,29 @@ h2 {
 
 .resize-button:hover {
   background-color: #16e0bd;
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 480px) {
+  .top-container {
+    height: 60vh; /* Increase height for mobile */
+    padding-top: 10px; /* Add padding to the top for better alignment */
+    padding-bottom: 150px; /* Add padding to the top for better alignment */
+  }
+
+  #particles-js {
+    height: 100%; /* Increase particles canvas height */
+  }
+
+  .profile-picture {
+    width: 120px; /* Adjust profile picture size */
+  }
+
+  .user-info-panel {
+    margin-bottom: 50px; /* Ensure spacing above navigation */
+  }
+
+  .navigation-buttons {
+    bottom: 0px; /* Adjust bottom spacing to provide more space */
+  }
 }
