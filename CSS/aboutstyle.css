@@ -103,7 +103,7 @@ h2 {
 .user-info-panel {
     text-align: center; /* Center the text */
     z-index: 2; /* Ensure the user info panel is above particles */
-    padding: 40px;
+    padding: 20px;
 }
 
 /* Profile Text Styling */
