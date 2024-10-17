@@ -247,4 +247,10 @@ p {
 
     .navigation-buttons {
         flex-direction: row; /* Stack navigation buttons vertically on mobile */
-        gap:
+        gap: 0.5rem; /* Adjust gap for better spacing on mobile */
+    }
+
+    .nav-button {
+        font-size: 12px; /* Adjust font size for buttons on mobile */
+    }
+}
