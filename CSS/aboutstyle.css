@@ -94,7 +94,7 @@ h2 {
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make it circular */
     position: absolute; /* Absolute positioning for consistency */
-    top: 10%; /* Set the top position relative to the container */
+    top: 50%; /* Adjusted from 10% to 50% to move lower */
     transform: translateY(-50%); /* Center vertically */
     z-index: 2; /* Ensure the profile picture is above particles and text */
 }
@@ -109,7 +109,7 @@ h2 {
 .profile-text {
     z-index: 1; /* Ensure text is below the profile picture but still visible */
     color: #d7d7d7; /* Ensure text is visible */
-    margin-top: 10px; /* Space between picture and text */
+    margin-top: 20px; /* Space between picture and text */
 }
 
 /* Navigation Buttons */
@@ -205,7 +205,7 @@ p {
 }
 
 /* Mobile adjustments */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     body {
         font-size: 14px; /* Adjust the base font size for better readability on small screens */
     }
@@ -221,9 +221,12 @@ p {
     }
 
     .top-container {
-        height: 60vh; /* Increase height for mobile */
-        padding-top: 10px; /* Add padding to the top for better alignment */
-        padding-bottom: 50px; /* Add padding to the top for better alignment */
+        padding-top: 10px;
+        border-bottom: 1px solid #2e2e2e;
+    }
+
+    .profile-picture {
+        top: 55%; /* Adjusted for mobile screens to lower the picture slightly more */
     }
 
     .bottom-container {
