@@ -42,7 +42,7 @@ h1 {
     color: #16e0bd;
     -webkit-user-select: none; /* Safari */
     user-select: none;
-    text-align: center; /* Center align headings */
+    text-align: left; /* Ensure all h1 elements are aligned to the left */
 }
 
 h2 {
@@ -53,7 +53,6 @@ h2 {
     font-weight: 400;
     -webkit-user-select: none; /* Safari */
     user-select: none;
-    text-align: center; /* Center align subheadings */
 }
 
 .main-container {
@@ -94,8 +93,9 @@ h2 {
     width: 150px; /* Set a width for the profile picture */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make it circular */
-    position: relative;
-    top: -211px; /* Adjusted for better vertical positioning */
+    position: absolute; /* Absolute positioning for consistency */
+    top: 10%; /* Set the top position relative to the container */
+    transform: translateY(-50%); /* Center vertically */
     z-index: 2; /* Ensure the profile picture is above particles and text */
 }
 
@@ -212,12 +212,12 @@ p {
 
     h1 {
         font-size: 18px; /* Smaller font size for headings on mobile */
-        text-align: center; /* Center align headings */
+        text-align: center; /* Center align headings for better presentation on mobile */
     }
 
     h2 {
         font-size: 14px; /* Smaller font size for subheadings on mobile */
-        text-align: center; /* Center align subheadings */
+        text-align: center; /* Center align subheadings for better presentation on mobile */
     }
 
     .top-container {
@@ -237,7 +237,7 @@ p {
 
     .panel-title {
         font-size: 20px; /* Adjust font size for panel titles on mobile */
-        text-align: center; /* Center align panel titles */
+        text-align: center; /* Center align panel titles for better presentation on mobile */
     }
 
     p {
@@ -246,11 +246,5 @@ p {
     }
 
     .navigation-buttons {
-        flex-direction: row; /* Stack navigation buttons horizontally */
-        gap: 0.5rem; /* Adjust gap for better spacing */
-    }
-
-    .nav-button {
-        font-size: 12px; /* Adjust font size for buttons on mobile */
-    }
-}
+        flex-direction: row; /* Stack navigation buttons vertically on mobile */
+        gap:
