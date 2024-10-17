@@ -205,7 +205,7 @@ p {
 }
 
 /* Mobile adjustments */
-@media (max-width:  480px) {
+@media (max-width: 480px) {
     body {
         font-size: 14px; /* Adjust the base font size for better readability on small screens */
     }
@@ -223,7 +223,7 @@ p {
     .top-container {
         height: 60vh; /* Increase height for mobile */
         padding-top: 10px; /* Add padding to the top for better alignment */
-        padding-bottom: 150px; /* Add padding to the top for better alignment */
+        padding-bottom: 50px; /* Add padding to the top for better alignment */
     }
 
     .bottom-container {
