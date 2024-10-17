@@ -42,7 +42,7 @@ h1 {
     color: #16e0bd;
     -webkit-user-select: none; /* Safari */
     user-select: none;
-    text-align: left; /* Ensure all h1 elements are aligned to the left */
+    text-align: center; /* Center align headings */
 }
 
 h2 {
@@ -53,6 +53,7 @@ h2 {
     font-weight: 400;
     -webkit-user-select: none; /* Safari */
     user-select: none;
+    text-align: center; /* Center align subheadings */
 }
 
 .main-container {
@@ -93,7 +94,7 @@ h2 {
     width: 150px; /* Set a width for the profile picture */
     height: auto; /* Maintain aspect ratio */
     border-radius: 50%; /* Make it circular */
-    position: relative; /* Changed to relative positioning */
+    position: relative;
     top: -211px; /* Adjusted for better vertical positioning */
     z-index: 2; /* Ensure the profile picture is above particles and text */
 }
@@ -211,12 +212,12 @@ p {
 
     h1 {
         font-size: 18px; /* Smaller font size for headings on mobile */
-        text-align: center; /* Center align headings for better presentation on mobile */
+        text-align: center; /* Center align headings */
     }
 
     h2 {
         font-size: 14px; /* Smaller font size for subheadings on mobile */
-        text-align: center; /* Center align subheadings for better presentation on mobile */
+        text-align: center; /* Center align subheadings */
     }
 
     .top-container {
@@ -236,7 +237,7 @@ p {
 
     .panel-title {
         font-size: 20px; /* Adjust font size for panel titles on mobile */
-        text-align: center; /* Center align panel titles for better presentation on mobile */
+        text-align: center; /* Center align panel titles */
     }
 
     p {
@@ -245,8 +246,8 @@ p {
     }
 
     .navigation-buttons {
-        flex-direction: row; /* Stack navigation buttons vertically on mobile */
-        gap: 0.5rem; /* Adjust gap for better spacing on mobile */
+        flex-direction: row; /* Stack navigation buttons horizontally */
+        gap: 0.5rem; /* Adjust gap for better spacing */
     }
 
     .nav-button {
