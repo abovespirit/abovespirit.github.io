@@ -4,24 +4,27 @@
 ---
 3D Artist Intern 
 A Square Games & Simulation 
-Date (i.e 2020-present or 2016-2023)
+Date (2024)
 https://imgur.com/6INuMOJ.jpg 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+ ○  Developed 30+ assets in an upcoming party game for Steam 
+ ○  Quickly implemented changes following feedback sessions 
+ ○  Adapted to a stylized art style through textures & ligh ng 
+ ○  Integrated assets into Unity, while communica ng with Agile/Scrum methodologies
 ---
 3D Generalist 
 Lizard Lair Games
-Date (i.e 2020-present or 2016-2023)
+Date (2023-2024)
 https://imgur.com/N8gzIDE.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
 Medical Animation Intern 
-Arthrex
-Date (i.e 2020-present or 2016-2023)
+Arthrex 
+Date (2017)
 https://imgur.com/9ZHO8H4.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
-Role
-Company
-Date (i.e 2020-present or 2016-2023)
+Environment Artist
+Aviary Productions
+Date (2022-2023)
 https://imgur.com/piQwEN1.jpg
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
