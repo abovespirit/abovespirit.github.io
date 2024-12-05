@@ -1,17 +1,15 @@
-https://example1.png
-Descriptions go under each image like this! png/jpeg/jpg/gif supported.
+https://imgur.com/Cb3yQXM.png
 
-https://example2.jpg
-Description for example2.jpg.
+https://imgur.com/Jd6nfaz.png
+I grabbed these awesome FPS gloves from Bogdan Zhukov off the UE5 store!
+https://imgur.com/HaeQHuR.png
 
-https://example3.gif
-These aren't real images but need replacing with your own.
+https://imgur.com/3gJoByK.png
 
-https://examplevideo.mp4
-MP4's are also supported but like with images should be hosted somewhere like dropbox.
+https://imgur.com/ea3Vb3r.png
 
-https://beforepic.png // https://afterpic.png
-You can create before and after slider by seperating two urls with ' // ' 
+https://imgur.com/DQIpcul.png
 
-https://sketchfabexample.com 
-you can also embed sketchfab files by pasting the url, no need for direct embedd urls. 
+https://imgur.com/WvJp01p.png
+
+https://imgur.com/S7W2g2J.mp4
