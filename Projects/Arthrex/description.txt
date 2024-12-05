@@ -1,6 +1,6 @@
 Arthrex 
 ---
-Arthrex Operating Room
+A throwback to my 2018 internship with Arthrex! This project took me back and forth from the real-life operating room upstairs, gathering reference images and measurements, and recreating the space for both visual and Virtual Reality use. I had the privilege of working alongside Patrick Eckhold. Overall this was a great experience and an even greater company.
 ---
 3ds Max, Photoshop, Maya, Vray
 ---
