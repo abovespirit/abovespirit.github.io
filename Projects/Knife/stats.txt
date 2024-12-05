@@ -1,13 +1,13 @@
 Triangles: 
-
+16,129
 Materials: 
-
+1
 Texture Size: 
-
+4k
 Texel Density: 
-
+4k
 Workflow: 
-
+High to low 
 Target Engine: 
-
+UE5
 Collaborators:
