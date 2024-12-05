@@ -65,15 +65,12 @@ h2 {
 
 /* Top Container */
 .top-container {
-    flex: 0 0 auto; /* Adjust the height as needed */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    padding-top: 10px;
-    position: relative;
-    height: 50vh; /* Keep the height */
-    z-index: 1; /* Ensure content is on top */
+    margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  box-sizing: border-box;
     border-bottom: 1px solid #2e2e2e;
     background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
     background-size: cover;
