@@ -6,7 +6,7 @@
 A Square Games & Simulation 
 Date (2024)
 https://imgur.com/6INuMOJ.jpg 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+I contributed to the development of 30+ assets for an upcoming party game set to release on Steam, adapting quickly to feedback during review sessions and ensuring seamless integration of stylized textures and lighting. My role included importing and optimizing assets in Unity while collaborating with the team using Agile/Scrum methodologies. I also worked with a team of interns to start a VR military simulation project focused on a convoy training targeted for the Quest 2.
 ---
 3D Generalist 
 Lizard Lair Games
