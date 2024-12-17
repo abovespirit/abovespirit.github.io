@@ -1,4 +1,4 @@
-Triangles: 
+Triangles: 16,129
 16,129
 Materials: 
 1
