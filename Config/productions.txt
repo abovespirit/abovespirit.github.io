@@ -18,11 +18,11 @@ Environment Artist
 Aviary Productions
 (2022-2023)
 https://imgur.com/piQwEN1.jpg
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+I created game-ready assets using the Nanite texturing pipeline, working with Blender’s remesher workflow for mesh preparation and laying out UVs for texturing. These assets were integrated into Unreal Engine 5 with a focus on functionality and optimization. Progress was tracked in Jira, and revisions were made as needed to meet project deadlines.
 ---
 Medical Animation Intern 
 Arthrex 
 (2017)
 https://imgur.com/9ZHO8H4.jpg 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+I gathered references and detailed measurements from an on-site operating room to recreate the environment and implement props and tools for rendering. Collaborating with the 3D Animation Supervisor, I helped produce photorealistic renders using V-Ray. Working closely with the art and animation team, I gained valuable insights into advanced techniques and workflow processes.
 ---
