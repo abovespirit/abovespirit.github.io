@@ -4,25 +4,25 @@
 ---
 3D Artist Intern 
 A Square Games & Simulation 
-Date (2024)
+(2024)
 https://imgur.com/6INuMOJ.jpg 
 I contributed to the development of 30+ assets for an upcoming party game set to release on Steam, adapting quickly to feedback during review sessions and ensuring seamless integration of stylized textures and lighting. My role included importing and optimizing assets in Unity while collaborating with the team using Agile/Scrum methodologies. I also worked with a team of interns to start a VR military simulation project focused on a convoy training targeted for the Quest 2.
 ---
 3D Generalist 
 Lizard Lair Games
-Date (2023-2024)
+(2023-2024)
 https://imgur.com/N8gzIDE.jpg 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
+I established a workflow guide for a team of artists, providing resources to streamline task execution and ensure consistency. I led weekly discussions to review and refine assets, ensuring they adhered to the project’s art style. My contributions included developing 3+ boss models, editing a range of assets, and integrating them into Unreal Engine 5 with custom collisions and LODs for optimal performance.
 ---
 Environment Artist
 Aviary Productions
-Date (2022-2023)
+(2022-2023)
 https://imgur.com/piQwEN1.jpg
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
 Medical Animation Intern 
 Arthrex 
-Date (2017)
+(2017)
 https://imgur.com/9ZHO8H4.jpg 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sodales justo vitae lacinia ornare. Pellentesque commodo mollis velit, finibus malesuada elit bibendum ut. Mauris sit amet nisi ante. Ut commodo auctor lorem id elementum. Ut at arcu congue, dictum est a, egestas neque. Aenean ipsum ipsum, elementum sit amet vehicula eu, congue sit amet risus. Aliquam a sem ac eros feugiat blandit vestibulum non diam.
 ---
