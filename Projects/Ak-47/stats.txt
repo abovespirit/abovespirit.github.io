@@ -1,13 +1,13 @@
-Triangles: 
+Triangles: 31,900
 
-Materials: 
+Materials: 1
 
-Texture Size: 
+Texture Size: 4k
 
-Texel Density: 
+Texel Density: 4k
 
-Workflow: 
+Workflow: PBR / Metal Roughness
 
-Target Engine: 
+Target Engine: Unity 
 
 Collaborators:
