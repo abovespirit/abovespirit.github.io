@@ -1,5 +1,7 @@
 Triangles: 31,900
 
+Triangles (VR): 5,704
+
 Materials: 1
 
 Texture Size: 4k
