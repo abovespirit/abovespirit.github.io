@@ -99,6 +99,11 @@ h2 {
 .user-info-panel {
   text-align: center; /* Center the text */
   z-index: 2; /* Ensure the user info panel is above particles */
+  position: relative;
+}
+
+.user-info-panel img {
+  display: none; /* Hide any broken image icons */
 }
 
 /* Profile Text Styling */
@@ -167,16 +172,18 @@ h2 {
 .resize-button {
   background-color: #171717;
   border: none;
-  color: #d7d7d7;
-  font-size: 20px;
-  padding: 10px;
-  margin-bottom: 5px;
+  color: #16e0bd;
+  padding: 8px;
+  margin: 5px 0;
   cursor: pointer;
-  transition: background-color 0.3s;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: ease 0.3s;
 }
 
 .resize-button:hover {
   background-color: #16e0bd;
+  color: #171717;
 }
 
 /* Media Queries for Mobile Devices */
