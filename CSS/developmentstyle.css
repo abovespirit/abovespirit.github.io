@@ -75,10 +75,6 @@ h2 {
   height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
-  background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
 }
 
 #particles-js {
@@ -103,9 +99,9 @@ h2 {
 
 /* User Info Panel */
 .user-info-panel {
-  text-align: center; /* Center the text */
-  z-index: 2; /* Ensure the user info panel is above particles */
-  margin-top: 20px;
+    text-align: center; /* Center the text */
+    z-index: 2; /* Ensure the user info panel is above particles */
+    margin-top: 20px;
 }
 
 /* Profile Text Styling */
