@@ -37,6 +37,10 @@ body {
   flex-direction: column;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
 /* Heading Styles */
 h1 {
   font-size: 20px;
