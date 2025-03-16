@@ -29,6 +29,7 @@ html::-webkit-scrollbar {
 /* Hide scrollbar for IE and Edge */
 html {
   -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-gutter: stable;
 }
 
 body {
