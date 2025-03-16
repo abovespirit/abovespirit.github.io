@@ -81,7 +81,7 @@ body {
 }
 
 /* Hide the Profile Picture text but keep the image */
-.user-info-panel span {
+.hidden-text {
   display: none;
 }
 
