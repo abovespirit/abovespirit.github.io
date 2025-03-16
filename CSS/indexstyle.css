@@ -22,6 +22,7 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: scroll; 
   box-sizing: border-box;
   background-image: url('../img/Website-Content/background.png'); /* Background image */
   background-size: cover;
