@@ -13,6 +13,7 @@ html::-webkit-scrollbar {
 /* Hide scrollbar for IE, Edge */
 html {
   -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-gutter: stable;
 }
 
 /* Body Styling */
