@@ -4,6 +4,6 @@ Test
 ---
 Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
 ---
-https://imgur.com/a/TwSGL9z.png
+https://imgur.com/bz3T48U.jpg
 ---
 nuketown.html
