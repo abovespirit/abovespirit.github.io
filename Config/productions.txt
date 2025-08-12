@@ -7,13 +7,13 @@ Founder & Lead Developer
 Virtucore Interactive
 (2025 - Present)
 https://imgur.com/uKiGxM1.png
-I contributed to the development of 30+ assets for an upcoming party game set to release on Steam, adapting quickly to feedback during review sessions and ensuring seamless integration of stylized textures and lighting. My role included importing and optimizing assets in Unity while collaborating with the team using Agile/Scrum methodologies. I also worked with a team of interns to start a VR military simulation project focused on a convoy training targeted for the Quest 2.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
 ---
 Independent Contractor
 Corgi Art House 
 (2024 - Present )
 https://imgur.com/gIlFHvp.png
-I contributed to the development of 30+ assets for an upcoming party game set to release on Steam, adapting quickly to feedback during review sessions and ensuring seamless integration of stylized textures and lighting. My role included importing and optimizing assets in Unity while collaborating with the team using Agile/Scrum methodologies. I also worked with a team of interns to start a VR military simulation project focused on a convoy training targeted for the Quest 2.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
 ---
 3D Artist Intern 
 A Square Games & Simulation 
