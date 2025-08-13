@@ -7,13 +7,13 @@ Founder & Lead Developer
 Virtucore Interactive
 (2025 - Present)
 https://imgur.com/uKiGxM1.png
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+I create 3D assets and interactive experiences for clients, specializing in games developed in Unity and Unreal Engine. I have developed custom environments and props, optimizing them for smooth performance on both PC and Quest VR, while hiring and coordinating small teams to handle specific tasks and ensure projects stay on track. I work closely with clients throughout the process, refining assets and workflows to deliver polished, high-quality results that meet both creative and technical goals.
 ---
-Independent Contractor
-Corgi Art House 
+Environment / Prop Artist
+Corgi Art House / Independent Contractor
 (2024 - Present )
 https://imgur.com/gIlFHvp.png
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.
+Working with Corgi Art House as an Environment and Prop Artist, I create game-ready assets and help build prototype environments for an indie title. I have experimented with AI-generated decals to enhance realism and assist in troubleshooting Perforce version control to keep the workflow smooth. I collaborate closely with a small team of developers and artists, meeting weekly to share progress and plan next steps.
 ---
 3D Artist Intern 
 A Square Games & Simulation 
