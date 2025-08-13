@@ -164,27 +164,58 @@
         let burstCount = 0;
         const maxBursts = 10;
         let canBurst = true;
+        let isBurstActive = false;
         let particlesInstance = null;
+        let canvas = null;
+        let cooldownTimeout = null;
 
         // Get the particles instance
         document.addEventListener('DOMContentLoaded', () => {
             particlesInstance = particles.pJS;
             
-            // Override the click handler
-            const canvas = document.querySelector('#particles-js canvas');
+            // Set up the click handler
+            canvas = document.querySelector('#particles-js canvas');
             if (canvas) {
                 canvas.style.cursor = 'pointer';
                 canvas.addEventListener('click', handleBurstClick);
+                
+                // Add visual feedback for cooldown
+                const cooldownOverlay = document.createElement('div');
+                cooldownOverlay.style.position = 'absolute';
+                cooldownOverlay.style.top = '0';
+                cooldownOverlay.style.left = '0';
+                cooldownOverlay.style.width = '100%';
+                cooldownOverlay.style.height = '100%';
+                cooldownOverlay.style.background = 'rgba(0,0,0,0.3)';
+                cooldownOverlay.style.display = 'none';
+                cooldownOverlay.style.justifyContent = 'center';
+                cooldownOverlay.style.alignItems = 'center';
+                cooldownOverlay.style.color = 'white';
+                cooldownOverlay.style.fontSize = '16px';
+                cooldownOverlay.style.zIndex = '10';
+                cooldownOverlay.id = 'cooldown-overlay';
+                canvas.parentNode.insertBefore(cooldownOverlay, canvas.nextSibling);
             }
         });
 
         // Custom burst click handler
         function handleBurstClick(event) {
-            if (!canBurst || burstCount >= maxBursts) return;
+            // Prevent multiple rapid clicks
+            if (!canBurst || isBurstActive || burstCount >= maxBursts) {
+                return;
+            }
             
-            // Disable further bursts temporarily
+            // Set active state
+            isBurstActive = true;
             canBurst = false;
             burstCount++;
+            
+            // Show cooldown overlay
+            const cooldownOverlay = document.getElementById('cooldown-overlay');
+            if (cooldownOverlay) {
+                cooldownOverlay.textContent = `${maxBursts - burstCount} bursts remaining`;
+                cooldownOverlay.style.display = 'flex';
+            }
             
             // Create a burst effect
             const rect = event.target.getBoundingClientRect();
@@ -193,8 +224,9 @@
                 y: event.clientY - rect.top
             };
             
-            // Add particles at click position
-            for (let i = 0; i < 10; i++) {
+            // Add particles at click position with staggered timing
+            const particleCount = 10;
+            for (let i = 0; i < particleCount; i++) {
                 setTimeout(() => {
                     particlesInstance.particles.array.push(
                         particlesInstance.fn.particlesCreate(
@@ -202,23 +234,46 @@
                             pos.y / particlesInstance.canvas.pxratio
                         )
                     );
-                }, i * 50); // Stagger particle creation for smoother effect
+                }, i * 50);
             }
             
             // Show burst count in console
             console.log(`Burst ${burstCount} of ${maxBursts}`);
             
-            // Re-enable bursts after cooldown
-            setTimeout(() => {
-                canBurst = true;
-                
-                // If we've reached max bursts, disable further clicks
-                if (burstCount >= maxBursts) {
-                    console.log('Maximum bursts reached');
-                    canvas.style.cursor = 'default';
-                    canvas.removeEventListener('click', handleBurstClick);
+            // Start cooldown
+            let cooldownTime = 3000; // 3 seconds
+            const cooldownInterval = setInterval(() => {
+                cooldownTime -= 100;
+                if (cooldownTime <= 0) {
+                    clearInterval(cooldownInterval);
+                    isBurstActive = false;
+                    canBurst = true;
+                    
+                    // If we've reached max bursts, disable further clicks
+                    if (burstCount >= maxBursts) {
+                        console.log('Maximum bursts reached');
+                        canvas.style.cursor = 'default';
+                        canvas.removeEventListener('click', handleBurstClick);
+                        if (cooldownOverlay) {
+                            cooldownOverlay.textContent = 'Maximum bursts used';
+                            setTimeout(() => cooldownOverlay.style.display = 'none', 2000);
+                        }
+                    } else if (cooldownOverlay) {
+                        cooldownOverlay.style.display = 'none';
+                    }
                 }
-            }, 3000); // 3 second cooldown
+            }, 100);
+            
+            // Clear any existing timeout
+            if (cooldownTimeout) clearTimeout(cooldownTimeout);
+            
+            // Set a safety timeout in case the interval fails
+            cooldownTimeout = setTimeout(() => {
+                clearInterval(cooldownInterval);
+                isBurstActive = false;
+                canBurst = true;
+                if (cooldownOverlay) cooldownOverlay.style.display = 'none';
+            }, 3500);
         }
     </script>
 </body>

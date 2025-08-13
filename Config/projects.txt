@@ -1,7 +1,7 @@
 Knife
 Revolver
 Arthrex
-Glock
+Mag
 Tank
 Ak-47
 M4

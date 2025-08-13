@@ -76,7 +76,8 @@ h2 {
   height: 50vh; /* Keep the height */
   z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
-  background-image: url('../img/Website-Content/background.png'); /* Set background image directly on body for testing */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('../img/Website-Content/background.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
