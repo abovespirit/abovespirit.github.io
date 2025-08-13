@@ -58,10 +58,10 @@
     </script>
 
     <script>
-        // particles.js configuration with thicker lines and limited particle count
-        particlesJS('particles-js', {
+        // Configuration for particles.js with burst control
+        const particlesConfig = {
           particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } }, // Reduced for performance
+            number: { value: 80, density: { enable: true, value_area: 800 } },
             color: { value: '#FFFFFF' },
             shape: {
               type: 'circle',
@@ -69,24 +69,157 @@
               polygon: { nb_sides: 5 },
               image: { src: '', width: 100, height: 100 }
             },
-            opacity: { value: 0.5, anim: { enable: false } },
-            size: { value: 2, anim: { enable: false } },
+            opacity: { 
+              value: 0.5, 
+              anim: { 
+                enable: true,
+                speed: 0.5,
+                opacity_min: 0.1,
+                sync: false
+              } 
+            },
+            size: { 
+              value: 2, 
+              random: true,
+              anim: { 
+                enable: true,
+                speed: 2,
+                size_min: 0.1,
+                sync: false
+              } 
+            },
             line_linked: {
               enable: true,
               distance: 150,
               color: '#16e0bd',
-              opacity: 0.8, // Slightly more visible
-              width: 2 // Thicker lines for better visibility
+              opacity: 0.8,
+              width: 1,
+              shadow: {
+                enable: true,
+                color: '#16e0bd',
+                blur: 5
+              }
             },
-            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false } }
+            move: { 
+              enable: true, 
+              speed: 1.5, 
+              direction: 'none', 
+              random: true, 
+              straight: false, 
+              out_mode: 'bounce', 
+              bounce: true,
+              attract: { 
+                enable: true,
+                rotateX: 600,
+                rotateY: 1200
+              }
+            }
           },
           interactivity: {
             detect_on: 'canvas',
-            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
+            events: { 
+              onhover: { 
+                enable: true, 
+                mode: 'grab' 
+              },
+              onclick: { 
+                enable: true, 
+                mode: 'push' 
+              },
+              resize: true 
+            },
+            modes: { 
+              grab: { 
+                distance: 140, 
+                line_linked: { 
+                  opacity: 1 
+                } 
+              },
+              bubble: { 
+                distance: 200, 
+                size: 6, 
+                duration: 0.3, 
+                opacity: 0.8, 
+                speed: 3 
+              },
+              repulse: { 
+                distance: 100, 
+                duration: 0.4 
+              },
+              push: { 
+                particles_nb: 6 
+              },
+              remove: { 
+                particles_nb: 2 
+              }
+            }
           },
           retina_detect: true
+        };
+
+        // Initialize particles
+        const particles = particlesJS('particles-js', particlesConfig);
+
+        // Burst control variables
+        let burstCount = 0;
+        const maxBursts = 10;
+        let canBurst = true;
+        let particlesInstance = null;
+
+        // Get the particles instance
+        document.addEventListener('DOMContentLoaded', () => {
+            particlesInstance = particles.pJS;
+            
+            // Override the click handler
+            const canvas = document.querySelector('#particles-js canvas');
+            if (canvas) {
+                canvas.style.cursor = 'pointer';
+                canvas.addEventListener('click', handleBurstClick);
+            }
         });
+
+        // Custom burst click handler
+        function handleBurstClick(event) {
+            if (!canBurst || burstCount >= maxBursts) return;
+            
+            // Disable further bursts temporarily
+            canBurst = false;
+            burstCount++;
+            
+            // Create a burst effect
+            const rect = event.target.getBoundingClientRect();
+            const pos = {
+                x: event.clientX - rect.left,
+                y: event.clientY - rect.top
+            };
+            
+            // Add particles at click position
+            for (let i = 0; i < 10; i++) {
+                setTimeout(() => {
+                    particlesInstance.particles.array.push(
+                        particlesInstance.fn.particlesCreate(
+                            pos.x / particlesInstance.canvas.pxratio,
+                            pos.y / particlesInstance.canvas.pxratio
+                        )
+                    );
+                }, i * 50); // Stagger particle creation for smoother effect
+            }
+            
+            // Show burst count in console
+            console.log(`Burst ${burstCount} of ${maxBursts}`);
+            
+            // Re-enable bursts after cooldown
+            setTimeout(() => {
+                canBurst = true;
+                
+                // If we've reached max bursts, disable further clicks
+                if (burstCount >= maxBursts) {
+                    console.log('Maximum bursts reached');
+                    canvas.style.cursor = 'default';
+                    canvas.removeEventListener('click', handleBurstClick);
+                }
+            }, 3000); // 3 second cooldown
+        }
     </script>
 </body>
 </html>
