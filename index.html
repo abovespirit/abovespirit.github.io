@@ -58,34 +58,182 @@
     </script>
 
     <script>
-        // particles.js configuration with thicker lines and limited particle count
-        particlesJS('particles-js', {
-          particles: {
-            number: { value: 80, density: { enable: true, value_area: 800 } }, // Reduced for performance
-            color: { value: '#FFFFFF' },
-            shape: {
-              type: 'circle',
-              stroke: { width: 0, color: '#000000' },
-              polygon: { nb_sides: 5 },
-              image: { src: '', width: 100, height: 100 }
-            },
-            opacity: { value: 0.5, anim: { enable: false } },
-            size: { value: 2, anim: { enable: false } },
-            line_linked: {
-              enable: true,
-              distance: 150,
-              color: '#16e0bd',
-              opacity: 0.8, // Slightly more visible
-              width: 2 // Thicker lines for better visibility
-            },
-            move: { enable: true, speed: 2, direction: 'none', random: false, straight: false, out_mode: 'out', bounce: false, attract: { enable: false } }
-          },
-          interactivity: {
-            detect_on: 'canvas',
-            events: { onhover: { enable: true, mode: 'repulse' }, onclick: { enable: true, mode: 'push' }, resize: true },
-            modes: { grab: { distance: 100, line_linked: { opacity: 1 } }, bubble: { distance: 50, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 50, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
-          },
-          retina_detect: true
+        // Custom particle system
+        class ParticleSystem {
+            constructor() {
+                this.burstCount = 0;
+                this.canBurst = true;
+                this.particles = [];
+                this.canvas = document.querySelector('#particles-js');
+                this.ctx = null;
+                this.animationId = null;
+                this.mouse = { x: null, y: null };
+                
+                if (this.canvas) {
+                    this.ctx = this.canvas.getContext('2d');
+                    this.init();
+                }
+            }
+            
+            init() {
+                // Set canvas size
+                this.resizeCanvas();
+                window.addEventListener('resize', () => this.resizeCanvas());
+                
+                // Create initial particles
+                for (let i = 0; i < 50; i++) {
+                    this.particles.push(this.createParticle());
+                }
+                
+                // Event listeners
+                this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
+                this.canvas.addEventListener('click', (e) => this.handleClick(e));
+                this.canvas.style.cursor = 'pointer';
+                
+                // Start animation
+                this.animate();
+            }
+            
+            createParticle(x, y, isBurst = false) {
+                return {
+                    x: x !== undefined ? x : Math.random() * this.canvas.width,
+                    y: y !== undefined ? y : Math.random() * this.canvas.height,
+                    size: 3,
+                    vx: isBurst ? (Math.random() - 0.5) * 5 : (Math.random() - 0.5) * 0.5,
+                    vy: isBurst ? (Math.random() - 0.5) * 5 : (Math.random() - 0.5) * 0.5,
+                    color: 'rgba(255, 255, 255, 0.5)'
+                };
+            }
+            
+            handleMouseMove(e) {
+                const rect = this.canvas.getBoundingClientRect();
+                this.mouse.x = e.clientX - rect.left;
+                this.mouse.y = e.clientY - rect.top;
+            }
+            
+            handleClick(e) {
+                if (!this.canBurst || this.burstCount >= 5) return;
+                
+                this.burstCount++;
+                this.canBurst = false;
+                
+                // Create burst particles
+                const rect = this.canvas.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                for (let i = 0; i < 4; i++) {
+                    this.particles.push(this.createParticle(x, y, true));
+                }
+                
+                // Cooldown
+                setTimeout(() => {
+                    this.canBurst = true;
+                }, 3000);
+            }
+            
+            resizeCanvas() {
+                this.canvas.width = this.canvas.offsetWidth;
+                this.canvas.height = this.canvas.offsetHeight;
+            }
+            
+            updateParticles() {
+                // Update particle positions
+                for (let i = 0; i < this.particles.length; i++) {
+                    const p = this.particles[i];
+                    
+                    // Apply velocity
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    
+                    // Bounce off edges
+                    if (p.x < 0 || p.x > this.canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > this.canvas.height) p.vy *= -1;
+                    
+                    // Apply mouse repulsion
+                    if (this.mouse.x && this.mouse.y) {
+                        const dx = p.x - this.mouse.x;
+                        const dy = p.y - this.mouse.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        const maxDistance = 100;
+                        
+                        if (distance < maxDistance) {
+                            const force = (1 - distance / maxDistance) * 0.5;
+                            const angle = Math.atan2(dy, dx);
+                            p.vx += Math.cos(angle) * force * 2;
+                            p.vy += Math.sin(angle) * force * 2;
+                        }
+                    }
+                    
+                    // Limit speed
+                    const speed = Math.sqrt(p.vx * p.vx + p.vy * p.vy);
+                    const maxSpeed = isBurst ? 5 : 2;
+                    if (speed > maxSpeed) {
+                        p.vx = (p.vx / speed) * maxSpeed;
+                        p.vy = (p.vy / speed) * maxSpeed;
+                    }
+                }
+                
+                // Draw connections
+                this.drawConnections();
+            }
+            
+            drawConnections() {
+                const maxDistance = 150;
+                
+                for (let i = 0; i < this.particles.length; i++) {
+                    for (let j = i + 1; j < this.particles.length; j++) {
+                        const p1 = this.particles[i];
+                        const p2 = this.particles[j];
+                        const dx = p1.x - p2.x;
+                        const dy = p1.y - p2.y;
+                        const distance = Math.sqrt(dx * dx + dy * dy);
+                        
+                        if (distance < maxDistance) {
+                            const opacity = 1 - (distance / maxDistance);
+                            this.ctx.strokeStyle = `rgba(22, 224, 189, ${opacity * 0.5})`;
+                            this.ctx.lineWidth = 1;
+                            this.ctx.beginPath();
+                            this.ctx.moveTo(p1.x, p1.y);
+                            this.ctx.lineTo(p2.x, p2.y);
+                            this.ctx.stroke();
+                        }
+                    }
+                }
+            }
+            
+            animate() {
+                this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+                
+                // Draw particles
+                this.ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+                for (const p of this.particles) {
+                    this.ctx.beginPath();
+                    this.ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                    this.ctx.fill();
+                }
+                
+                // Update and draw connections
+                this.updateParticles();
+                
+                this.animationId = requestAnimationFrame(() => this.animate());
+            }
+            
+            destroy() {
+                cancelAnimationFrame(this.animationId);
+                this.canvas.removeEventListener('mousemove', this.handleMouseMove);
+                this.canvas.removeEventListener('click', this.handleClick);
+            }
+        }
+        
+        // Initialize when DOM is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            const particleSystem = new ParticleSystem();
+            
+            // Clean up when leaving the page
+            window.addEventListener('beforeunload', () => {
+                particleSystem.destroy();
+            });
         });
     </script>
 </body>
