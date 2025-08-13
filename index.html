@@ -160,9 +160,9 @@
         // Initialize particles
         const particles = particlesJS('particles-js', particlesConfig);
 
-        // Click counter and burst control
+        // Click counter and particle control
         let clickCount = 0;
-        const clicksPerBurst = 20;
+        const clicksPerParticle = 5;
         let particlesInstance = null;
         let canvas = null;
         let clickCounter = null;
@@ -188,7 +188,7 @@
                 clickCounter.style.padding = '5px 10px';
                 clickCounter.style.background = 'rgba(0,0,0,0.5)';
                 clickCounter.style.borderRadius = '10px';
-                clickCounter.textContent = `Clicks until next burst: ${clicksPerBurst}`;
+                clickCounter.textContent = `Clicks until next particle: ${clicksPerParticle}`;
                 
                 // Insert counter into the DOM
                 canvas.parentNode.insertBefore(clickCounter, canvas.nextSibling);
@@ -198,14 +198,14 @@
             }
         });
 
-        // Click handler that counts clicks and triggers burst every 20th click
+        // Click handler that counts clicks and creates a particle every 5th click
         function handleClick(event) {
             clickCount++;
-            const clicksRemaining = clicksPerBurst - (clickCount % clicksPerBurst);
+            const clicksRemaining = clicksPerParticle - (clickCount % clicksPerParticle);
             
             // Update click counter display
             if (clickCounter) {
-                clickCounter.textContent = `Clicks until next burst: ${clicksRemaining}`;
+                clickCounter.textContent = `Clicks until next particle: ${clicksRemaining}`;
                 
                 // Add a subtle animation when clicked
                 clickCounter.style.transform = 'scale(1.1)';
@@ -214,14 +214,14 @@
                 }, 100);
             }
             
-            // Check if it's time for a burst (every 20th click)
-            if (clickCount % clicksPerBurst === 0) {
-                createBurst(event);
+            // Create a particle every 5th click
+            if (clickCount % clicksPerParticle === 0) {
+                createParticle(event);
             }
         }
         
-        // Create a burst of particles at the click position
-        function createBurst(event) {
+        // Create a single particle at the click position
+        function createParticle(event) {
             if (!particlesInstance) return;
             
             const rect = event.currentTarget.getBoundingClientRect();
@@ -230,35 +230,26 @@
                 y: (event.clientY - rect.top) / particlesInstance.canvas.px_ratio
             };
             
-            // Create 15 particles in a burst pattern
-            const particleCount = 15;
-            for (let i = 0; i < particleCount; i++) {
-                // Random delay for each particle (0-200ms)
-                setTimeout(() => {
-                    const particle = particlesInstance.particles.addParticle(pos);
-                    if (particle) {
-                        // Give particles some outward velocity
-                        const angle = Math.random() * Math.PI * 2;
-                        const speed = 3 + Math.random() * 2;
-                        particle.vx = Math.cos(angle) * speed;
-                        particle.vy = Math.sin(angle) * speed;
-                    }
-                }, Math.random() * 200);
-            }
-            
-            // Show burst effect in console
-            console.log(`Burst created at (${Math.round(pos.x)}, ${Math.round(pos.y)})`);
-            
-            // Visual feedback for burst
-            if (clickCounter) {
-                clickCounter.style.color = '#fff';
-                clickCounter.style.fontWeight = 'bold';
-                setTimeout(() => {
-                    if (clickCounter) {
-                        clickCounter.style.color = '#16e0bd';
-                        clickCounter.style.fontWeight = 'normal';
-                    }
-                }, 300);
+            // Create a single particle
+            const particle = particlesInstance.particles.addParticle(pos);
+            if (particle) {
+                // Give the particle a slight random velocity
+                const angle = Math.random() * Math.PI * 2;
+                const speed = 1 + Math.random();
+                particle.vx = Math.cos(angle) * speed;
+                particle.vy = Math.sin(angle) * speed;
+                
+                // Visual feedback
+                if (clickCounter) {
+                    clickCounter.style.color = '#fff';
+                    setTimeout(() => {
+                        if (clickCounter) {
+                            clickCounter.style.color = '#16e0bd';
+                        }
+                    }, 200);
+                }
+                
+                console.log(`Particle created at (${Math.round(pos.x)}, ${Math.round(pos.y)})`);
             }
         }
     </script>
