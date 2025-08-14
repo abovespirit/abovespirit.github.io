@@ -78,9 +78,10 @@ h2 {
   border-bottom: 1px solid #2e2e2e;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
               url('../img/Website-Content/background.png');
-  background-size: cover;
+  background-size: 80%; /* Zoom out the background image */
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 #particles-js {
