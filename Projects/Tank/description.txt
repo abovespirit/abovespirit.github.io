@@ -1,4 +1,4 @@
-Birthday Cake Tank
+Tank
 ---
 This is an ongoing project for an upcoming Kaiju game called Volcanewt. This three layer tank is the first boss you will encounter in the game.
 ---
