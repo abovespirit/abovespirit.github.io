@@ -1,12 +1,19 @@
 function addUserInformation() {
     // Determine the base path dynamically
     let basePath = '';
-    if (window.location.pathname.includes('/Projects/')) {
-        basePath = '../../Config/userinformation.txt';
-    } else if (window.location.pathname.includes('/HTML/')) {
+    const path = window.location.pathname;
+    
+    // Check if we're in a project page (inside Projects directory)
+    if (path.includes('/Projects/')) {
+        // Count how many levels deep we are to build the correct relative path
+        const depth = path.split('/').filter(Boolean).length - 1; // -1 because Projects is one level
+        basePath = '../'.repeat(depth) + 'Config/userinformation.txt';
+    } 
+    // Handle other cases (root, HTML directory, etc.)
+    else if (path.includes('/HTML/')) {
         basePath = '../Config/userinformation.txt';
     } else {
-        basePath = 'Config/userinformation.txt'; // Default case if in root or unexpected location
+        basePath = 'Config/userinformation.txt'; // Default case if in root
     }
 
     fetch(basePath)
