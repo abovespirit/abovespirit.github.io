@@ -84,12 +84,13 @@ h2 {
 .top-container::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
+  width: 120%;
+  height: 120%;
+  transform: translate(-50%, -50%) scale(0.8); /* Zoom out by scaling down */
   background: url('../img/Website-Content/background.png') no-repeat center center;
-  background-size: cover;
+  background-size: contain;
   z-index: -1;
   opacity: 0.5; /* 50% opacity */
 }
