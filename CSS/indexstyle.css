@@ -49,12 +49,11 @@ h1 {
 h2 {
   font-size: 16px;
   margin: 0;
-  color: #e0e0e0; /* Lighter grey for better contrast */
+  color: grey;
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   -webkit-user-select: none; /* Safari */
   user-select: none;
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Add subtle text shadow for better readability */
 }
 
 .main-container {
@@ -120,15 +119,12 @@ h2 {
 /* Profile Picture Styling */
 .profile-picture {
   width: 150px; /* Set a width for the profile picture */
-  height: 150px; /* Make height equal to width for perfect circle */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 50%; /* Make it circular */
   position: absolute; /* Absolute positioning for consistency */
   top: 10%; /* Set the top position relative to the container */
   transform: translateY(-50%); /* Center vertically */
   z-index: 2; /* Ensure the profile picture is above particles and text */
-  border: 3px solid white; /* Add white border */
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Add subtle glow effect */
-  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 /* User Info Panel */
