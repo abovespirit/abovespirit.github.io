@@ -4,6 +4,14 @@ This is an ongoing project for an upcoming Kaiju game called Volcanewt. This thr
 ---
 Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
 ---
-https://imgur.com/wcDppsX.png
+https://imgur.com/wcDppsX.jpg
+---
+https://imgur.com/Nal5yZA.jpg
+---
+https://imgur.com/CuqSJsK.jpg
+---
+https://imgur.com/ypmmADt.jpg
+---
+https://imgur.com/VtWa3ZD.jpg
 ---
 tank.html
