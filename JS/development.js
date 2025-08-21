@@ -1,119 +1,139 @@
-// Function to create a thumbnail with overlay icons
-function createThumbnail(src, alt, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab) {
-    const thumbnailLink = document.createElement("a");
-    thumbnailLink.href = galleryPageUrl;
-
-    const thumbnailDiv = document.createElement("div");
-    thumbnailDiv.classList.add("thumbnail");
-
-    const thumbnailImg = document.createElement("img");
-    thumbnailImg.src = src;
-    thumbnailImg.alt = alt;
-
-    const thumbnailTitle = document.createElement("div");
-    thumbnailTitle.classList.add("thumbnail-title");
-    thumbnailTitle.innerText = alt;
-
-    let iconIndex = 0;
-
-    if (hasMultipleImages) {
-        const multipleImagesIcon = document.createElement("i");
-        multipleImagesIcon.className = "fa-solid fa-layer-group overlay-icon";
-        multipleImagesIcon.style.left = `${10 + iconIndex * 30}px`;
-        thumbnailDiv.appendChild(multipleImagesIcon);
-        iconIndex++;
+function addUserInformation() {
+    // Determine the base path dynamically
+    let basePath = '';
+    const path = window.location.pathname;
+    
+    // Check if we're in a project page (inside Projects or development directory)
+    if (path.includes('/Projects/') || path.includes('/development/')) {
+        // For both Projects and development directories, we need to go up 2 levels
+        basePath = '../../Config/userinformation.txt';
+    } 
+    // Handle other cases (root, HTML directory, etc.)
+    else if (path.includes('/HTML/')) {
+        basePath = '../Config/userinformation.txt';
+    } else {
+        basePath = 'Config/userinformation.txt'; // Default case if in root
     }
 
-    if (hasVideo) {
-        const videoIcon = document.createElement("i");
-        videoIcon.className = "fa-solid fa-video overlay-icon";
-        videoIcon.style.left = `${10 + iconIndex * 30}px`;
-        thumbnailDiv.appendChild(videoIcon);
-        iconIndex++;
-    }
-
-    if (hasYouTube) {
-        const youtubeIcon = document.createElement("i");
-        youtubeIcon.className = "fa-brands fa-youtube overlay-icon";
-        youtubeIcon.style.left = `${10 + iconIndex * 30}px`;
-        thumbnailDiv.appendChild(youtubeIcon);
-        iconIndex++;
-    }
-
-    if (hasSketchfab) {
-        const sketchfabIcon = document.createElement("i");
-        sketchfabIcon.className = "fa-solid fa-cube overlay-icon";
-        sketchfabIcon.style.left = `${10 + iconIndex * 30}px`;
-        thumbnailDiv.appendChild(sketchfabIcon);
-        iconIndex++;
-    }
-
-    thumbnailDiv.appendChild(thumbnailImg);
-    thumbnailDiv.appendChild(thumbnailTitle);
-    thumbnailLink.appendChild(thumbnailDiv);
-
-    return thumbnailLink;
-}
-
-// Get the thumbnail container element
-const thumbnailContainer = document.getElementById("thumbnail-container");
-
-// Function to fetch and parse the description.txt file
-function fetchProjectData(projectName) {
-    const descriptionPath = `../Development/${projectName}/description.txt`;
-    const mediaPath = `../Development/${projectName}/media.txt`;
-
-    return Promise.all([
-        fetch(descriptionPath).then(response => response.text()),
-        fetch(mediaPath).then(response => response.text())
-    ])
-    .then(([descriptionText, mediaText]) => {
-        const [title, description, tags, thumbnailUrl, htmlFileName] = descriptionText.split('---').map(line => line.trim());
-        const galleryPageUrl = descriptionPath.replace('description.txt', htmlFileName);
-
-        const mediaLines = mediaText.split('\n').map(line => line.trim()).filter(line => line && !line.startsWith('#'));
-        const hasMultipleImages = mediaLines.filter(line => line.match(/\.(jpeg|jpg|gif|png)$/)).length > 1;
-        const hasVideo = mediaLines.some(line => line.match(/\.(mp4)$/));
-        const hasYouTube = mediaLines.some(line => line.includes('youtube.com'));
-        const hasSketchfab = mediaLines.some(line => line.includes('sketchfab.com'));
-
-        // Find the banner image
-        const bannerImageLine = mediaLines.find(line => line.endsWith('*'));
-        const bannerImageUrl = bannerImageLine ? bannerImageLine.replace('*', '').trim() : null;
-
-        return { src: thumbnailUrl, alt: title, galleryPageUrl, hasMultipleImages, hasVideo, hasYouTube, hasSketchfab, bannerImageUrl };
-    })
-    .catch(error => console.error('Error loading project data:', error));
-}
-
-// Function to fetch the projects.txt file
-function fetchProjects() {
-    return fetch('../Config/development.txt')
+    fetch(basePath)
         .then(response => response.text())
-        .then(text => text.split('\n').map(line => line.trim()).filter(line => line))
-        .catch(error => console.error('Error loading projects:', error));
+        .then(data => {
+            const lines = data.split('\n').map(line => line.trim());
+            const [profilePicUrl, profileName, profileRole, location, ...socials] = lines;
+
+            // Get the container where the user info should be added
+            const container = document.querySelector('.top-container'); // Select the specific container
+
+            // Create a document fragment for better performance
+            const fragment = document.createDocumentFragment();
+
+            // Create the user info panel
+            const userInfoPanel = document.createElement("div");
+            userInfoPanel.className = "user-info-panel";
+
+            // Create and append the image
+            const img = document.createElement("img");
+            img.src = profilePicUrl; // Your Profile Pic URL from txt
+            img.alt = "Profile Picture";
+            img.className = "profile-pic";
+            userInfoPanel.appendChild(img);
+
+            // Create and append the user name as a link
+            const userNameLink = document.createElement("a");
+            userNameLink.href = "../../index.html";
+            userNameLink.className = "user-name-link";
+
+            const userName = document.createElement("h1");
+            userName.className = "user-name";
+            userName.textContent = profileName; // Your Profile Name from txt
+            userNameLink.appendChild(userName);
+            userInfoPanel.appendChild(userNameLink);
+
+            // Create and append the user role
+            const userRole = document.createElement("h2");
+            userRole.textContent = profileRole; // Your Current Title & Studio from txt
+            userInfoPanel.appendChild(userRole);
+
+            // Create and append the location
+            const userLocationContainer = document.createElement("div");
+            userLocationContainer.className = "user-location-container";
+
+            const locationIcon = document.createElement("span");
+            locationIcon.className = "material-symbols-outlined";
+            locationIcon.textContent = "near_me";
+            userLocationContainer.appendChild(locationIcon);
+
+            const userLocation = document.createElement("h2");
+            userLocation.textContent = location; // Your Location from txt
+            userLocationContainer.appendChild(userLocation);
+
+            userInfoPanel.appendChild(userLocationContainer);
+
+            // Create and append the social icons
+            const socialIcons = document.createElement("div");
+            socialIcons.className = "social-icons";
+            userInfoPanel.appendChild(socialIcons);
+
+            // Define the mapping of keywords to icon classes
+            const socialIconMap = {
+                'x.com': "fa-brands fa-x-twitter",
+                'facebook.com': "fa-brands fa-square-facebook",
+                'discord.com': "fa-brands fa-discord",
+                'discord.gg': "fa-brands fa-discord",
+                'dsc.gg': "fa-brands fa-discord",
+                'instagram.com': "fa-brands fa-instagram",
+                'youtube.com': "fa-brands fa-youtube",
+                'linkedin.com': "fab fa-linkedin",
+                'artstation.com': "fa-brands fa-artstation",
+                'github.com': "fab fa-github",
+                'wordpress.com': "fab fa-wordpress",
+                'vimeo.com': "fab fa-vimeo",
+                'behance.net': "fab fa-behance",
+                'playstation.com': "fab fa-playstation",
+                'xbox.com': "fab fa-xbox",
+                'vk.com': "fab fa-vk",
+                'steamcommunity.com': "fab fa-steam",
+                'tumblr.com': "fab fa-tumblr",
+                'threads.net': "fab fa-threads",
+                'patreon.com': "fab fa-patreon",
+                'twitch.tv': "fab fa-twitch",
+                'mixer.com': "fab fa-mixer",
+                'mastodon.social': "fab fa-mastodon",
+                'mailchimp.com': "fab fa-mailchimp",
+                'email': "fas fa-envelope"
+            };
+
+            // Adding social links based on the detected type
+            socials.forEach(social => {
+                let iconClass;
+                let url = social;
+
+                // Detect the type of social link
+                const socialType = Object.keys(socialIconMap).find(key => social.includes(key)) || 'email';
+                iconClass = socialIconMap[socialType];
+                if (socialType === 'email') {
+                    url = `mailto:${social}`;
+                }
+
+                if (iconClass) {
+                    const a = document.createElement("a");
+                    a.href = url;
+                    a.target = "_blank";
+                    const icon = document.createElement("i");
+                    icon.className = iconClass;
+                    a.appendChild(icon);
+                    socialIcons.appendChild(a);
+                }
+            });
+
+            // Append the user info panel to the fragment
+            fragment.appendChild(userInfoPanel);
+
+            // Append the fragment to the container
+            container.appendChild(fragment);
+        })
+        .catch(error => console.error('Error loading user information:', error));
 }
 
-// Fetch projects and create thumbnails
-fetchProjects().then(projects => {
-    let bannerImageSet = false;
-    const fragment = document.createDocumentFragment(); // Create a document fragment
-
-    const fetchProjectDataPromises = projects.map(projectName => {
-        return fetchProjectData(projectName).then(artwork => {
-            const thumbnail = createThumbnail(artwork.src, artwork.alt, artwork.galleryPageUrl, artwork.hasMultipleImages, artwork.hasVideo, artwork.hasYouTube, artwork.hasSketchfab);
-            fragment.appendChild(thumbnail); // Append each thumbnail to the fragment
-
-            // Set the banner image if not already set
-            if (!bannerImageSet && artwork.bannerImageUrl) {
-                document.querySelector('.top-container').style.backgroundImage = `url(${artwork.bannerImageUrl})`;
-                bannerImageSet = true;
-            }
-        }).catch(error => console.error(`Error loading data for project: ${projectName}`, error));
-    });
-
-    // Once all project data has been fetched and processed, append the fragment to the container
-    Promise.all(fetchProjectDataPromises).then(() => {
-        thumbnailContainer.appendChild(fragment);
-    });
-});
+// Call the function when the document is fully loaded
+document.addEventListener("DOMContentLoaded", addUserInformation);
