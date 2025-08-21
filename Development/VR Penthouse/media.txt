@@ -1,2 +1,27 @@
-https://www.youtube.com/watch?v=VKBawnwC7tk
+https://imgur.com/uZebLw7.png
 Descriptions go under each image like this! png/jpeg/jpg/gif supported.
+
+https://imgur.com/Mu76khF.jpg
+Description for example2.jpg.
+
+https://imgur.com/wK6wjS1.png
+These aren't real images but need replacing with your own.
+
+https://imgur.com/YnGNPkS.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://imgur.com/jNrKoGT.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://imgur.com/PlwI4jw.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://imgur.com/OAJhv2e.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://imgur.com/UfnRqsU.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
+https://imgur.com/8EN3dGq.png
+MP4's are also supported but like with images should be hosted somewhere like dropbox.
+
