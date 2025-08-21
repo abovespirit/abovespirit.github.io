@@ -3,6 +3,9 @@ function addUserInformation() {
     let basePath = '';
     const path = window.location.pathname;
     
+    // Check if we're in a development content page
+    const isDevelopmentContentPage = path.includes('/Development/') && !path.endsWith('/development.html');
+    
     // Check if we're in a project page (inside Projects or development directory)
     if (path.includes('/Projects/') || path.includes('/development/')) {
         // For both Projects and development directories, we need to go up 2 levels
@@ -21,15 +24,29 @@ function addUserInformation() {
             const lines = data.split('\n').map(line => line.trim());
             const [profilePicUrl, profileName, profileRole, location, ...socials] = lines;
 
-            // Get the container where the user info should be added
-            const container = document.querySelector('.top-container'); // Select the specific container
+            // Get the appropriate container based on page type
+            let container;
+            if (isDevelopmentContentPage) {
+                // For development content pages, use the .user-info-panel inside .top-container
+                container = document.querySelector('.top-container .user-info-panel');
+                if (!container) {
+                    console.warn('User info panel container not found in development content page');
+                    return; // Don't proceed if we can't find the right container
+                }
+            } else {
+                // For other pages, use the default .top-container
+                container = document.querySelector('.top-container');
+            }
 
             // Create a document fragment for better performance
             const fragment = document.createDocumentFragment();
 
-            // Create the user info panel
-            const userInfoPanel = document.createElement("div");
-            userInfoPanel.className = "user-info-panel";
+            // Only create the user info panel if we're not in a development content page
+            let userInfoPanel = container;
+            if (!isDevelopmentContentPage) {
+                userInfoPanel = document.createElement("div");
+                userInfoPanel.className = "user-info-panel";
+            }
 
             // Create and append the image
             const img = document.createElement("img");
