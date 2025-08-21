@@ -17,8 +17,13 @@
         <div class="top-container">
             <!-- Particles.js container -->
             <div id="particles-js"></div>
-
             
+            <!-- User Information Container -->
+            <div class="user-info-container">
+                <div class="user-info-panel">
+                    <!-- User information will be inserted here by userinformation.js -->
+                </div>
+            </div>
 
             <!-- Navigation Buttons -->
             <div class="navigation-buttons">
@@ -41,9 +46,9 @@
     <!-- Link to the external JavaScript files -->
     <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
     <script src='https://threejs.org/examples/js/libs/stats.min.js'></script>
+    <script src="../JS/resize-thumbnails.js"></script>
     <script src="../JS/userinformation.js?v=1.0"></script>
     <script src="../JS/development.js?v=1.0"></script>
-    <script src="../JS/resize-thumbnails.js"></script>
     <script>
         // JavaScript to add 'active' class to the current page's navigation button
         document.addEventListener("DOMContentLoaded", function() {

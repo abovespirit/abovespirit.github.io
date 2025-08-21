@@ -22,14 +22,17 @@ function addUserInformation() {
             const [profilePicUrl, profileName, profileRole, location, ...socials] = lines;
 
             // Get the container where the user info should be added
-            const container = document.querySelector('.top-container'); // Select the specific container
+            const container = document.querySelector('.user-info-panel');
+            if (!container) {
+                console.error('User info panel container not found');
+                return;
+            }
+            
+            // Clear any existing content
+            container.innerHTML = '';
 
             // Create a document fragment for better performance
             const fragment = document.createDocumentFragment();
-
-            // Create the user info panel
-            const userInfoPanel = document.createElement("div");
-            userInfoPanel.className = "user-info-panel";
 
             // Create and append the image
             const img = document.createElement("img");
@@ -52,7 +55,7 @@ function addUserInformation() {
             // Create and append the user role
             const userRole = document.createElement("h2");
             userRole.textContent = profileRole; // Your Current Title & Studio from txt
-            userInfoPanel.appendChild(userRole);
+            container.appendChild(userRole);
 
             // Create and append the location
             const userLocationContainer = document.createElement("div");
@@ -67,12 +70,12 @@ function addUserInformation() {
             userLocation.textContent = location; // Your Location from txt
             userLocationContainer.appendChild(userLocation);
 
-            userInfoPanel.appendChild(userLocationContainer);
+            container.appendChild(userLocationContainer);
 
             // Create and append the social icons
             const socialIcons = document.createElement("div");
             socialIcons.className = "social-icons";
-            userInfoPanel.appendChild(socialIcons);
+            container.appendChild(socialIcons);
 
             // Define the mapping of keywords to icon classes
             const socialIconMap = {
@@ -125,9 +128,6 @@ function addUserInformation() {
                     socialIcons.appendChild(a);
                 }
             });
-
-            // Append the user info panel to the fragment
-            fragment.appendChild(userInfoPanel);
 
             // Append the fragment to the container
             container.appendChild(fragment);
