@@ -4,7 +4,7 @@ function addUserInformation() {
     const path = window.location.pathname;
     
     // Check if we're in a project page (inside Projects or development directory)
-    if (path.includes('/Projects/') || path.includes('/development/')) {
+    if (path.includes('/Projects/') || path.includes('/Development/')) {
         // For both Projects and development directories, we need to go up 2 levels
         basePath = '../../Config/userinformation.txt';
     } 
