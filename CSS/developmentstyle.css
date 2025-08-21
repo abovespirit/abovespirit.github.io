@@ -67,40 +67,18 @@ h2 {
 
 /* Top Container */
 .top-container {
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* Adjust the height as needed */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align content to the top */
-  align-items: center;
-  padding: 40px 20px 20px; /* Add more padding at the top */
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  padding-top: 10px;
   position: relative;
-  min-height: 50vh;
-  z-index: 1;
+  height: 50vh; /* Keep the height */
+  min-height: 400px; /* Ensure minimum height */
+  z-index: 1; /* Ensure content is on top */
   border-bottom: 1px solid #2e2e2e;
-  overflow: hidden;
-}
-
-/* User Info Container */
-.user-info-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  z-index: 2;
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 800px;
-  padding: 20px;
-  background-color: rgba(18, 18, 18, 0.8);
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.user-info-panel {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
+  overflow: hidden; /* Hide any overflow from the background */
 }
 
 /* Add a pseudo-element for the background to handle ultrawide better */
