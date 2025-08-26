@@ -8,6 +8,6 @@ Texel Density:
 
 Workflow: 
 
-Target Engine: UE5
+Target Engine: Unity
 
 Collaborators:
