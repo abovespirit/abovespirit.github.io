@@ -1,8 +1,10 @@
 VR Penthouse 
 ---
-Test
+The VR Penthouse was one of my early summer projects during my first year of college, created shortly after purchasing my first VR headset. My goal was to design a high-rise apartment in a major city with a balcony area, allowing me to experiment with environment creation in Unity and experience it firsthand in VR. Around the same time, I completed Unity’s official VR tutorial, which taught me how to build a standalone VR application with a small apartment room. For the VR Penthouse, however, I pushed the concept further by using an open-source SDK to upload the project into a preexisting game, enabling others to explore the environment as well. The scene was built using a mixture of premade assets from an Archviz pack along with custom models I created myself.
+
+Throughout the project, I gained valuable technical experience that shaped my approach to building immersive VR environments. I learned how to set up and bake lighting optimized for VR performance, atlas textures to reduce draw calls, and implement particle systems like rain using shaders and flipbooks to create realistic materials such as water droplets on the floor and windows. I also integrated spatial audio with falloff ranges for ambient effects like city noise and rainfall, and used occlusion culling to improve performance by unloading unseen objects. Additional features included a video player that allowed users to stream online content on a virtual TV, enhancing the sense of purpose within the environment. To further optimize performance, I experimented with simple versus complex colliders and applied texture compression techniques to reduce build size. Overall, this project was not only fun but also a pivotal first step in sparking my passion for creating engaging and immersive VR experiences.
 ---
-Software Tags - separated by commas (marmoset toolbag, unity, UE5, Blender, 3ds Max)
+Software Tags - separated by commas (3ds Max, Unity, Substance Painter, Photoshop, SteamVR)
 ---
 https://imgur.com/g0BeUVQ.png
 ---
