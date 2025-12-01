@@ -4,6 +4,12 @@ Descriptions go under each image like this! png/jpeg/jpg/gif supported.
 https://example2.jpg
 Description for example2.jpg.
 
+https://imgur.com/j04KXlk.jpg
+
+https://imgur.com/ZN0y8Mo.jpg
+
+https://imgur.com/PYPYdwR.jpg
+
 https://example3.gif
 These aren't real images but need replacing with your own.
 
