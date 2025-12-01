@@ -1,9 +1,6 @@
 https://imgur.com/YmJQLCj.png // https://imgur.com/n51h8dk.png
 You can create before and after slider by seperating two urls with ' // ' 
 
-https://sketchfab.com/3d-models/anime-r8-revolver-10f9e5df453443dbb677811caa614388
-you can also embed sketchfab files by pasting the url, no need for direct embedd urls. 
-
 https://imgur.com/aVzm55t.png
 
 https://imgur.com/FCsc25d.png
@@ -25,3 +22,5 @@ https://imgur.com/DQIpcul.png
 https://imgur.com/WvJp01p.png
 
 https://imgur.com/S7W2g2J.mp4
+
+https://sketchfab.com/3d-models/anime-r8-revolver-10f9e5df453443dbb677811caa614388
