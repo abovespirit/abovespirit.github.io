@@ -1,4 +1,4 @@
-S&W Revolver
+Tank
 ---
 This was the iconic revolver flooding Art Station ... the Tim Bergholz's Game-Ready Revolver Tutorial. I did an independent study during my junior year at UCF where I spent the first half of the semester carefully studying this tutorial and its workflows. I would say this project brought my skills to the next level, and I would HIGHLY recommend it to anyone wanting to get into weapon modeling.
 ---
